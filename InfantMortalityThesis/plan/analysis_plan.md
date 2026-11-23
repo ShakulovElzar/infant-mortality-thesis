@@ -96,3 +96,6 @@ Already computed before this date: counts, join checks and per-year missing/posi
 | Date | Change | Reason |
 |---|---|---|
 | 23 Nov 2026 | Version 1.0 | — |
+| 23 Nov 2026 | Benchmark (section 5): deaths are compared by the birth weight on the death record, as CDC tabulates them. | CDC imputes birth weight separately on birth and death records; with the death-record weight, deaths match exactly. Not an analysis change. |
+| 23 Nov 2026 | Benchmark result recorded: 2018–2023 PASS; 2016 and 2017 FAIL the strict rule because of CDC table issues (2016 file re-release has birth weight for 2,493 births listed "Not stated"; 2017 guide repeats all-races deaths in the NH White rows). Totals exact in all years. | Data accepted; reasons in `notebooks/01_benchmark.ipynb`. |
+| 23 Nov 2026 | Missing-data check (section 4, check 5) already triggered by Table 1: BMI unknown 6.4% of deaths vs 2.3% of survivors. Multiple imputation is required as a sensitivity analysis. | Descriptive Table 1, before any model. |

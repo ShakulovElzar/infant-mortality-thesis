@@ -1,0 +1,283 @@
+name,start_2023,end_2023,file,description,missing_codes_auto,years_present,position_by_year_if_different,codes
+DOB_YY,9,12,denominator+numerator,Birth Year,,2016-2023,,Birth Year 2023-2024 Birth year
+DOB_MM,13,14,denominator+numerator,Birth Month,,2016-2023,,Birth Month 01 January | 02 February | 03 March | 04 April | 05 May | 06 June | 07 July | 08 August | 09 September | 10 October | 11 November | 12 December
+DOB_TT,19,22,denominator+numerator,Time of Birth,9999,2016-2023,,Time of Birth 126 0000-2359 Time of Birth | 9999 Not Stated
+DOB_WK,23,23,denominator+numerator,Birth Day of Week,,2016-2023,,Birth Day of Week 1 Sunday | 2 Monday | 3 Tuesday | 4 Wednesday | 5 Thursday | 6 Friday | 7 Saturday
+BFACIL,32,32,denominator+numerator,Birth Place (Revised),5;9,2016-2023,,Birth Place (Revised) 33 1 Hospital | Revised data only. 2 Freestanding Birth Center | See field 1330 for national data. 3 Home (intended) | 4 Home (not intended) | 5 Home (unknown if intended) | 6 Clinic / Doctor’s Office | 7 Other | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 9 Unknown
+F_BFACIL,33,33,denominator+numerator,Reporting Flag for Birth Place,,2016-2023,,Reporting Flag for Birth Place See footnote
+BFACIL3,50,50,denominator+numerator,Facility Recode,3,2016-2023,,Facility Recode 1 In Hospital | 2 Not in Hospital | 3 Unknown or Not Stated
+MAGEIMP,73,73,denominator+numerator,Mother’s Age Imputed,,2016-2023,,"Mother’s Age Imputed Blank Age not imputed | Due to missing data, age imputed. 1 Age imputed"
+MAGEREP,74,74,denominator+numerator,Reported Age of Mother Used Flag,,2016-2023,,"Reported Age of Mother Used Flag Blank Reported age not used | Due to missing date of birth, reported age used. 1 Reported age used"
+MAGER,75,76,denominator+numerator,Mother’s Age Recode 41,,2016-2023,,"Mother’s Age Recode 41 12 10 – 12 years, 13 13 years, 14 14 years, 15 15 years, 16 16 years, | 17 17 years, 18 18 years, 19 19 years, 20 20 years, 21 21 years, | 22 22 years, 23 23 years, 24 24 years, 25 25 years, 26 26 years, | 27 27 years, 28 28 years, 29 29 years, 30 30 years, 31 31 years, | 32 32 years, 33 33 years, 34 34 years, 35 35 years, 36 36 years, | 37 37 years, 38 38 years, 39 39 years"
+MAGER14,77,78,denominator+numerator,Mother’s Age Recode 14,,2016-2023,,Mother’s Age Recode 14 01 Under 15 Years | 03 15 years | 04 16 years | 05 17 years | 06 18 years | 07 19 years | 08 20-24 years | 09 25-29 years | 10 30-34 years | 11 35-39 years | 12 40-44 years | 13 45-49 years | 14 50-54 years
+MAGER9,79,79,denominator+numerator,Mother’s Age Recode 9,,2016-2023,,Mother’s Age Recode 9 1 Under 15 years | 2 15-19 years | 3 20-24 years | 4 25-29 years | 5 30-34 years | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 6 35-39 years | 7 40-44 years | 8 45-49 years | 9 50-54 years
+MBSTATE_REC,84,84,denominator+numerator,Mother’s Nativity,3,2016-2023,,Mother’s Nativity 1 Born in the U.S. (50 US States) | 2 Born outside the U.S. (includes possessions) | 3 Unknown or Not Stated
+RESTATUS,104,104,denominator+numerator,Residence Status,,2016-2023,,Residence Status | United States 1 RESIDENT: State and county of occurrence and residence | are the same. | 2 INTRASTATE NONRESIDENT: State of occurrence and | residence are the same but county is different. | 3 INTERSTATE NONRESIDENT: State of occurrence and | residence are different but both are one of the 50 US states | or District of Columbia. | 4 FOREIGN RESIDENT: The state of residence is no
+MRACE31,105,106,denominator+numerator,Mother’s Race Recode 31,,2016-2023,,Mother’s Race Recode 31 | United States and all Outlying Areas 01 White (only) [only one race reported] | of the United States except Puerto 02 Black (only) | Rico 03 AIAN (American Indian and Alaskan Native) (only) | 04 Asian (only) | 05 NHOPI (Native Hawaiian or Other Pacific Islander) (only) | 06 Black and White | 07 Black and AIAN | 08 Black and Asian | 09 Black and NHOPI | 10 AIAN and White |
+MRACE6,107,107,denominator+numerator,Mother’s Race Recode 6,,2016-2023,,Mother’s Race Recode 6 | United States and all Outlying Areas 1 White (only) | of the United States except Puerto 2 Black (only) | Rico 3 AIAN (only) | 4 Asian (only) | 5 NHOPI (only) | 6 More than one race
+MRACE15,108,109,denominator+numerator,Mother’s Race Recode 15,,2016-2023,,Mother’s Race Recode 15 | United States and all Outlying Areas 01 White (only) | of the United States except Puerto 02 Black (only) | Rico 03 AIAN (only) | 04 Asian Indian (only) | 05 Chinese (only) | 06 Filipino (only) | 07 Japanese (only) | 08 Korean (only) | 09 Vietnamese (only) | 10 Other Asian (only) | 11 Hawaiian (only) | 12 Guamanian (only) | 13 Samoan (only) | 14 Other Pacific Islander (on
+MBRACE,,,denominator+numerator,Bridged Race Mother,,2016-2018,,Bridged Race Mother | Includes individuals reporting only one race and | individuals reporting more than one race bridged | to a single race. | United States and all Outlying Areas 1 White | of the United States except Puerto 2 Black | Rico 3 American Indian or Alaskan Native | 4 Asian or Pacific Islander | Puerto Rico 1 White | 2 Black | 0 Other (not classified as White or Black)
+MRACEIMP,111,111,denominator+numerator,Mother’s Race Imputed,1,2016-2023,,"Mother’s Race Imputed Blank Mother’s race not imputed | 1 Unknown race imputed | 2 All other races, formerly coded 09, imputed."
+MHISPX,112,112,denominator+numerator,Mother’s Hispanic Origin Recode,6;9,2018-2023,,Mother’s Hispanic Origin Recode 0 Non-Hispanic | 116 1 Mexican | 2 Puerto Rican | 3 Cuban | 4 Central and South American | 5 Dominican | 6 Other and Unknown Hispanic origin | 9 Hispanic origin not stated
+MHISP_R,115,115,denominator+numerator,Mother’s Hispanic Origin Recode,5;9,2016-2023,,Mother’s Hispanic Origin Recode 0 Non-Hispanic | 116 1 Mexican | 2 Puerto Rican | 3 Cuban | 4 Central and South American | 5 Other and Unknown Hispanic origin | 9 Hispanic origin not stated
+F_MHISP,116,116,denominator+numerator,Reporting Flag for Mother’s Origin,,2016-2023,,Reporting Flag for Mother’s Origin See footnote
+MRACEHISP,117,117,denominator+numerator,Mother’s Race/Hispanic Origin,8,2016-2023,,"Mother’s Race/Hispanic Origin 1 Non-Hispanic White (only) | Based on single/multiple-race (fields 105-106, 2 Non-Hispanic Black (only) | 107, and 108-109) 3 Non-Hispanic AIAN (only) | 4 Non-Hispanic Asian (only) | 5 Non-Hispanic NHOPI (only) | 6 Non-Hispanic more than one race | 7 Hispanic | 8 Origin unknown or not stated"
+MAR_P,119,119,denominator+numerator,Paternity Acknowledged,U,2016-2023,,Paternity Acknowledged 123 Y Yes | N No | U Unknown | X Not Applicable | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+DMAR,120,120,denominator+numerator,Marital Status,9,2016-2023,,"Marital Status | United States and all Outlying Areas 1 Married | Of the United States except Puerto 2 Unmarried | Rico 9 Unknown, NS | Puerto Rico 1 Yes | 2 Unmarried parents living together | 3 Unmarried parents not living together | 9 Unknown or not stated"
+MAR_IMP,121,121,denominator+numerator,Mother’s Marital Status Imputed,,2016-2023,,Mother’s Marital Status Imputed Blank Marital Status not imputed | 1 Marital Status imputed
+F_MAR_P,123,123,denominator+numerator,Reporting Flag for Paternity Acknowledged,,2016-2023,,Reporting Flag for Paternity Acknowledged See footnote
+MEDUC,124,124,denominator+numerator,Mother’s Education,9,2016-2023,,"Mother’s Education 1 8th grade or less | 2 9th through 12th grade with no diploma | 3 High school graduate or GED completed | 4 Some college credit, but not a degree. | 5 Associate degree (AA,AS) | 6 Bachelor’s degree (BA, AB, BS) | 7 Master’s degree (MA, MS, MEng, MEd, MSW, MBA) | 8 Doctorate (PhD, EdD) or Professional Degree (MD, DDS, | DVM, LLB, JD) | 9 Unknown"
+F_MEDUC,126,126,denominator+numerator,Reporting Flag for Education of Mother,,2016-2023,,Reporting Flag for Education of Mother See footnote
+FAGERPT_FLG,142,142,denominator+numerator,Father’s Reported Age Used,,2016-2023,,Father’s Reported Age Used Blank Father’s reported age not used | 1 Father’s reported age used
+FAGECOMB,147,148,denominator+numerator,Father’s Combined Age (Revised),99,2016-2023,,Father’s Combined Age (Revised) 09-98 Father’s combined age in years | 99 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+FAGE11,149,150,denominator+numerator,Father’s Age Recode 11,11,2016-2023,,Father’s Age Recode 11 01 Under 15 years | 02 15-19 years | 03 20-24 years | 04 25-29 years | 05 30-34 years | 06 35-39 years | 07 40-44 years | 08 45-49 years | 09 50-54 years | 10 55-98 years | 11 Not stated
+FRACE31,151,152,denominator+numerator,Father’s Race Recode 31,99,2016-2023,,Father’s Race Recode 31 01 White (only) [only one race reported] | 02 Black (only) | 03 AIAN (American Indian and Alaskan Native) (only) | 04 Asian (only) | 05 NHOPI (Native Hawaiian or Other Pacific Islander) (only) | 06 Black and White | 07 Black and AIAN | 08 Black and Asian | 09 Black and NHOPI | 10 AIAN and White | 11 AIAN and Asian | 12 AIAN and NHOPI | 13 Asian and White | 14 Asian and NHOP
+FRACE6,153,153,denominator+numerator,Father’s Race Recode 6,9,2016-2023,,Father’s Race Recode 6 1 White (only) | 2 Black (only) | 3 AIAN (only) | 4 Asian (only) | 5 NHOPI (only) | 6 More than one race | 9 Unknown or Not Stated
+FRACE15,154,155,denominator+numerator,Father’s Race Recode 15,99,2016-2023,,Father’s Race Recode 15 01 White (only) | 02 Black (only) | 03 AIAN (only) | 04 Asian Indian (only) | 05 Chinese (only) | 06 Filipino (only) | 07 Japanese (only) | 08 Korean (only) | 09 Vietnamese (only) | 10 Other Asian (only) | 11 Hawaiian (only) | 12 Guamanian (only) | 13 Samoan (only) | 14 Other Pacific Islander (only) | 15 More than one race | 99 Unknown or Not Stated
+FBRACE,,,denominator+numerator,Bridged Race Father,,2016-2017,,Bridged Race Father | Includes individuals reporting only one race and | individuals reporting more than one race bridged | to a single race. | United States and all Outlying Areas 1 White | of the United States except Puerto 2 Black | Rico 3 American Indian or Alaskan Native | 4 Asian or Pacific Islander | Puerto Rico 1 White | 2 Black | 0 Other (not classified as White or Black)
+FHISPX,159,159,denominator+numerator,Father’s Hispanic Origin Recode,6;9,2019-2023,,Father’s Hispanic Origin Recode 0 Non-Hispanic | 116 1 Mexican | 2 Puerto Rican | 3 Cuban | 4 Central and South American | 5 Dominican | 6 Other and Unknown Hispanic origin | 9 Hispanic origin not stated
+FHISP_R,160,160,denominator+numerator,Father’s Hispanic Origin Recode,5;9,2016-2023,,Father’s Hispanic Origin Recode 0 Non-Hispanic | 161 1 Mexican | 2 Puerto Rican | 3 Cuban | 4 Central and South American | 5 Other and Unknown Hispanic origin | 9 Hispanic origin not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+F_FHISP,161,161,denominator+numerator,Reporting Flag for Father’s Origin,,2016-2023,,Reporting Flag for Father’s Origin See footnote
+FRACEHISP,162,162,denominator+numerator,Father’s Race/Hispanic Origin,8;9,2016-2023,,"Father’s Race/Hispanic Origin 1 Non-Hispanic White (only) | Based on single/multiple-race (fields 151-152, 2 Non-Hispanic Black (only) | 153, and 154-155) 3 Non-Hispanic AIAN (only) | 4 Non-Hispanic Asian (only) | 5 Non-Hispanic NHOPI (only) | 6 Non-Hispanic more than one race | 7 Hispanic | 8 Origin unknown or not stated | 9 Race unknown or not stated (Non-Hispanic)"
+FEDUC,163,163,denominator+numerator,Father’s Education,9,2016-2023,,"Father’s Education 165 1 8th grade or less | 2 9th through 12th grade with no diploma | 3 High school graduate or GED completed | 4 Some college credit, but not a degree. | 5 Associate degree (AA,AS) | 6 Bachelor’s degree (BA, AB, BS) | 7 Master’s degree (MA, MS, MEng, MEd, MSW, MBA) | 8 Doctorate (PhD, EdD) or Professional Degree (MD, DDS, | DVM, LLB, JD) | 9 Unknown"
+F_FEDUC,165,165,denominator+numerator,Reporting Flag for Education of Father,,2016-2023,,Reporting Flag for Education of Father See footnote
+PRIORLIVE,171,172,denominator+numerator,Prior Births Now Living,99,2016-2023,,Prior Births Now Living 00-30 Number of children still living from previous live births | 99 Unknown or not stated
+PRIORDEAD,173,174,denominator+numerator,Prior Births Now Dead,99,2016-2023,,Prior Births Now Dead 00-30 Number of children dead from previous live births | 99 Unknown or not stated
+PRIORTERM,175,176,denominator+numerator,Prior Terminations/Fetal Death,99,2016-2023,,Prior Terminations/Fetal Death 0-30 Number of terminations/fetal deaths | 99 Unknown or not stated
+LBO_REC,179,179,denominator+numerator,Live Birth Order Recode,9,2016-2023,,Live Birth Order Recode 1-7 Live birth order | 8 8 or more live births | 9 Unknown or not stated
+TPO_REC,182,182,denominator+numerator,Total Pregnancy Order Recode,9,2016-2023,,Total Pregnancy Order Recode 1-7 Total pregnancy order | 8 8 or more total pregnancies | 9 Unknown or not stated
+ILLB_R,198,200,denominator+numerator,Interval of Last Live Birth Recode,999,2016-2023,,Interval of Last Live Birth Recode 000-003 Plural delivery | 126 004-300 Months since last live birth | 888 Not applicable / 1st live birth | 999 Unknown or not stated
+ILLB_R11,201,202,denominator+numerator,Interval Since Last Live Birth Recode 11,99,2016-2023,,Interval Since Last Live Birth Recode 11 00 Zero to 3 months (plural delivery) | 126 01 4 to 11 months | 02 12 to 17 months | 03 18 to 23 months | 04 24 to 35 months | 05 36 to 47 months | 06 48 to 59 months | 07 60 to 71 months | 08 72 months and over | 88 Not applicable (1st live birth) | 99 Unknown or not stated
+ILOO_R,206,208,denominator+numerator,Interval Since Last Other Outcome Recode,999,2016-2023,,Interval Since Last Other Outcome Recode 000-003 Plural delivery | 126 004-300 Months since last other pregnancy outcome | 888 Not applicable / 1st natality event | 999 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+ILOO_R11,209,210,denominator+numerator,Interval Since Last Other Outcome Recode 11 00,99,2016-2023,,Interval Since Last Other Outcome Recode 11 00 Zero to 3 months (plural delivery) | 126 01 4 to 11 months | 02 12 to 17 months | 03 18 to 23 months | 04 24 to 35 months | 05 36 to 47 months | 06 48 to 59 months | 07 60 to 71 months | 08 72 months and over | 88 Not applicable (1st natality event) | 99 Unknown or not stated
+ILP_R,214,216,denominator+numerator,Interval Since Last Pregnancy Recode,999,2016-2023,,Interval Since Last Pregnancy Recode 000-003 Plural delivery | 126 004-300 Months since last live birth | 888 Not applicable / no previous pregnancy | 999 Unknown or not stated
+ILP_R11,217,218,denominator+numerator,Interval Since Last Pregnancy Recode 11,99,2016-2023,,Interval Since Last Pregnancy Recode 11 00 Zero to 3 months (plural delivery) | 126 01 4 to 11 months | 02 12 to 17 months | 03 18 to 23 months | 04 24 to 35 months | 05 36 to 47 months | 06 48 to 59 months | 07 60 to 71 months | 08 72 months and over | 88 Not applicable (no previous pregnancy) | 99 Unknown or not stated
+PRECARE,224,225,denominator+numerator,Month Prenatal Care,99,2016-2023,,Month Prenatal Care 226 00 No prenatal care | 01-10 Month prenatal care began | 99 Unknown or not stated
+F_MPCB,226,226,denominator+numerator,Reporting Flag for Month Prenatal Care Began,,2016-2023,,Reporting Flag for Month Prenatal Care Began See footnote
+PRECARE5,227,227,denominator+numerator,Month Prenatal Care Began Recode,5,2016-2023,,Month Prenatal Care Began Recode 1 1st to 3rd month | 226 2 4th to 6th month | 3 7th to final month | 4 No prenatal care | 5 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+PREVIS,238,239,denominator+numerator,Number of Prenatal Visits (Revised),99,2016-2023,,Number of Prenatal Visits (Revised) 00-98 Number of prenatal visits | See field 242-243 for national data 99 Unknown or not stated
+PREVIS_REC,242,243,denominator+numerator,Number of Prenatal Visits Recode,12,2016-2023,,Number of Prenatal Visits Recode 01 No visits | 244 02 1 to 2 visits | 03 3 to 4 visits | 04 5 to 6 visits | 05 7 to 8 visits | 06 9 to 10 visits | 07 11 to 12 visits | 08 13 to 14 visits | 09 15 to 16 visits | 10 17 to 18 visits | 11 19 or more visits | 12 Unknown or not stated
+F_TPCV,244,244,denominator+numerator,Reporting Flag for Total Prenatal Care Visits,,2016-2023,,Reporting Flag for Total Prenatal Care Visits See footnote
+WIC,251,251,denominator+numerator,WIC,U,2016-2023,,WIC 252 Y Yes | N No | U Unknown or not stated
+F_WIC,252,252,denominator+numerator,Reporting Flag for WIC,,2016-2023,,Reporting Flag for WIC 0 Non-Reporting | 1 Reporting
+CIG_0,253,254,denominator+numerator,Cigarettes Before Pregnancy,99,2016-2023,,Cigarettes Before Pregnancy 00-97 Number of cigarettes daily | 265 98 98 or more cigarettes daily | 99 Unknown or not stated
+CIG_1,255,256,denominator+numerator,Cigarettes 1st Trimester,99,2016-2023,,Cigarettes 1st Trimester 266 00-97 Number of cigarettes daily | 98 98 or more cigarettes daily | 99 Unknown or not stated
+CIG_2,257,258,denominator+numerator,Cigarettes 2nd Trimester,99,2016-2023,,Cigarettes 2nd Trimester 267 00-97 Number of cigarettes daily | 98 98 or more cigarettes daily | 99 Unknown or not stated
+CIG_3,259,260,denominator+numerator,Cigarettes 3rd Trimester,99,2016-2023,,Cigarettes 3rd Trimester 268 00-97 Number of cigarettes daily | 98 98 or more cigarettes daily | 99 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+CIG0_R,261,261,denominator+numerator,Cigarettes Before Pregnancy Recode,6,2016-2023,,Cigarettes Before Pregnancy Recode 0 Nonsmoker | 265 1 1-5 | 2 6-10 | 3 11-20 | 4 21-40 | 5 41 or more | 6 Unknown or not stated
+CIG1_R,262,262,denominator+numerator,Cigarettes 1st Trimester Recode,6,2016-2023,,Cigarettes 1st Trimester Recode 0 Nonsmoker | 266 1 1-5 | 2 6-10 | 3 11-20 | 4 21-40 | 5 41 or more | 6 Unknown or not stated
+CIG2_R,263,263,denominator+numerator,Cigarettes 2nd Trimester Recode,6,2016-2023,,Cigarettes 2nd Trimester Recode 0 Nonsmoker | 267 1 1-5 | 2 6-10 | 3 11-20 | 4 21-40 | 5 41 or more | 6 Unknown or not stated
+CIG3_R,264,264,denominator+numerator,Cigarettes 3rd Trimester Recode,6,2016-2023,,Cigarettes 3rd Trimester Recode 0 Nonsmoker | 268 1 1-5 | 2 6-10 | 3 11-20 | 4 21-40 | 5 41 or more | 6 Not stated / Not on certificate
+F_CIGS_0,265,265,denominator+numerator,Reporting Flag for Cigarettes before Pregnancy,,2016-2023,,Reporting Flag for Cigarettes before Pregnancy See footnote
+F_CIGS_1,266,266,denominator+numerator,Reporting Flag for Cigarettes 1st Trimester,,2016-2023,,Reporting Flag for Cigarettes 1st Trimester See footnote
+F_CIGS_2,267,267,denominator+numerator,Reporting Flag for Cigarettes 2nd Trimester,,2016-2023,,Reporting Flag for Cigarettes 2nd Trimester See footnote
+F_CIGS_3,268,268,denominator+numerator,Reporting Flag for Cigarettes 3rd Trimester,,2016-2023,,Reporting Flag for Cigarettes 3rd Trimester See footnote
+CIG_REC,269,269,denominator+numerator,Cigarette Recode (Revised) 270,U,2016-2023,,Cigarette Recode (Revised) 270 Y Yes | N No | U Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+F_TOBACO,270,270,denominator+numerator,Reporting Flag for Tobacco use,,2016-2023,,Reporting Flag for Tobacco use See footnote
+MHTR,280,281,denominator+numerator,Mother’s Height in Inches 282,99,2016-2023,,Mother’s Height in Inches 282 30-78 Height in inches | (Recode) 99 Unknown or not stated
+F_M_HT,282,282,denominator+numerator,Reporting Flag for Mother’s Height,,2016-2023,,Reporting Flag for Mother’s Height See footnote
+BMI,283,286,denominator+numerator,BMI,,2016-2023,,BMI 282 13.0-69.9 Body Mass Index | 99.9 Unknown or not stated
+BMI_R,287,287,denominator+numerator,Body Mass Index Recode,9,2016-2023,,Body Mass Index Recode 282 1 Underweight <18.5 | 2 Normal 18.5-24.9 | 3 Overweight 25.0-29.9 | 4 Obesity I 30.0-39.9 | 5 Obesity II 35.0-39.9 | 6 Extreme Obesity III ≥ 40.0 | 9 Unknown or not stated
+PWgt_R,292,294,denominator+numerator,Pre-pregnancy Weight Recode,999,2016-2023,,Pre-pregnancy Weight Recode 075-375 Weight in pounds | 295 999 Unknown or not stated
+F_PWGT,295,295,denominator+numerator,Reporting Flag for Pre-pregnancy Weight,,2016-2023,,Reporting Flag for Pre-pregnancy Weight See footnote
+DWGT_R,299,301,denominator+numerator,Delivery Weight Recode,999,2016-2023,,Delivery Weight Recode 303 100-400 Weight in pounds | 999 Unknown or not stated
+F_DWGT,303,303,denominator+numerator,Reporting Flag for Delivery Weight,,2016-2023,,Reporting Flag for Delivery Weight See footnote
+WTGAIN,304,305,denominator+numerator,Weight Gain,99,2016-2023,,Weight Gain 307 00-97 Weight gain in pounds | 98 98 pounds and over | 99 Unknown or not stated
+WTGAIN_REC,306,306,denominator+numerator,Weight Gain Recode,9,2016-2023,,Weight Gain Recode 307 1 Less than 11 pounds | 2 11 to 20 pounds | 3 21 to 30 pounds | 4 31 to 40 pounds | 5 41 to 98 pounds | 9 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+F_WTGAIN,307,307,denominator+numerator,Reporting Flag for Weight Gain,,2016-2023,,Reporting Flag for Weight Gain See footnote
+RF_PDIAB,313,313,denominator+numerator,Pre-pregnancy Diabetes,,2016-2023,,Pre-pregnancy Diabetes 319 Y Yes
+RF_GDIAB,314,314,denominator+numerator,Gestational Diabetes,,2016-2023,,Gestational Diabetes 320 N No
+RF_PHYPE,315,315,denominator+numerator,Pre-pregnancy Hypertension 321,U,2016-2023,,Pre-pregnancy Hypertension 321 U Unknown or not stated
+RF_GHYPE,316,316,denominator+numerator,Gestational Hypertension 322,,2016-2023,,Gestational Hypertension 322
+RF_EHYPE,317,317,denominator+numerator,Hypertension Eclampsia,,2016-2023,,Hypertension Eclampsia 323
+RF_PPB,318,318,denominator+numerator,Previous Preterm Birth,,2016-2023,,Previous Preterm Birth 324
+F_RF_PDIAB,319,319,denominator+numerator,Reporting Flag for Pre-pregnancy Diabetes,,2016-2023,,Reporting Flag for Pre-pregnancy Diabetes See footnote
+F_RF_GDIAB,320,320,denominator+numerator,Reporting Flag for Gestational Diabetes,,2016-2023,,Reporting Flag for Gestational Diabetes
+F_RF_PHYPE,321,321,denominator+numerator,Reporting Flag for Pre-pregnancy Hypertension,,2016-2023,,Reporting Flag for Pre-pregnancy Hypertension
+F_RF_GHYPE,322,322,denominator+numerator,Reporting Flag for Gestational Hypertension,,2016-2023,,Reporting Flag for Gestational Hypertension
+F_RF_EHYPE,323,323,denominator+numerator,Reporting Flag for Hypertension Eclampsia,,2016-2023,,Reporting Flag for Hypertension Eclampsia
+F_RF_PPB,324,324,denominator+numerator,Reporting Flag for Previous Preterm Birth,,2016-2023,,Reporting Flag for Previous Preterm Birth
+RF_INFT,325,325,denominator+numerator,Infertility Treatment,U,2016-2023,,Infertility Treatment 328 Y Yes | Use reporting flag in field 319 N No | U Unknown or not stated
+RF_DRG,326,326,denominator+numerator,Fertility Enhancing Drugs 329,U,2016-2023,,Fertility Enhancing Drugs 329 Y Yes | N No | X Not applicable | U Unknown or not stated
+RF_ART,327,327,denominator+numerator,Asst. Reproductive Technology,U,2016-2023,,Asst. Reproductive Technology Y Yes | 330 N No | X Not applicable | U Unknown or not stated
+F_RF_INFT,328,328,denominator+numerator,Reporting Flag for Infertility Treatment,,2019-2023,,Reporting Flag for Infertility Treatment See footnote
+F_RF_DRG,329,329,denominator+numerator,Reporting Flag for Fertility Enhance Drugs,,2016-2023,,Reporting Flag for Fertility Enhance Drugs See footnote
+F_RF_ART,330,330,denominator+numerator,Reporting Flag for Reproductive Technology,,2016-2023,,Reporting Flag for Reproductive Technology See footnote
+RF_CESAR,331,331,denominator+numerator,Previous Cesareans,U,2016-2023,,Previous Cesareans 335 Y Yes | N No | U Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+RF_CESARN,332,333,denominator+numerator,Number of Previous Cesareans,99,2016-2023,,Number of Previous Cesareans 00 None | 336 01-30 Number of previous cesareans | 99 Unknown or not stated
+F_RF_CESAR,335,335,denominator+numerator,Reporting Flag for Previous Cesarean,,2016-2023,,Reporting Flag for Previous Cesarean See footnote
+F_RF_NCESAR,336,336,denominator+numerator,Reporting Flag for Number of Previous Cesareans,,2016-2023,,Reporting Flag for Number of Previous Cesareans See footnote
+NO_RISKS,337,337,denominator+numerator,No Risk Factors Checked,,2016-2023,,No Risk Factors Checked 126 1 True | 0 False | 9 Not Reported
+IP_GON,343,343,denominator+numerator,Gonorrhea,,2016-2023,,Gonorrhea 348 Y Yes
+IP_SYPH,344,344,denominator+numerator,Syphilis,,2016-2023,,Syphilis 349 N No
+IP_CHLAM,345,345,denominator+numerator,Chlamydia,U,2016-2023,,Chlamydia 350 U Unknown or not stated
+IP_HEPB,346,346,denominator+numerator,Hepatitis B,,2016-2023,,Hepatitis B 351
+IP_HEPC,347,347,denominator+numerator,Hepatitis C,,2016-2023,,Hepatitis C 352
+F_IP_GON,348,348,denominator+numerator,Reporting Flag for Gonorrhea,,2016-2023,,Reporting Flag for Gonorrhea See footnote
+F_IP_SYPH,349,349,denominator+numerator,Reporting Flag for Syphilis,,2016-2023,,Reporting Flag for Syphilis
+F_IP_CHLAM,350,350,denominator+numerator,Reporting Flag for Chlamydia,,2016-2023,,Reporting Flag for Chlamydia
+F_IP_HEPB,351,351,denominator+numerator,Reporting Flag for Hepatitis B,,2016-2023,,Reporting Flag for Hepatitis B
+F_IP_HEPC,352,352,denominator+numerator,Reporting Flag for Hepatitis C,,2016-2023,,Reporting Flag for Hepatitis C
+NO_INFEC,353,353,denominator+numerator,No Infections Checked,,2016-2023,,No Infections Checked 126 1 True | 0 False | 9 Not Reported
+OB_SUCC,360,360,denominator+numerator,Successful External Cephalic Version,U,2016-2023,,Successful External Cephalic Version Y Yes | 363 N No | U Unknown or not stated
+OB_FAIL,361,361,denominator+numerator,Failed External Cephalic Version,U,2016-2023,,Failed External Cephalic Version Y Yes | 364 N No | U Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+F_OB_SUCC,363,363,denominator+numerator,Reporting Flag for Successful External Cephalic Version,,2016-2023,,Reporting Flag for Successful External Cephalic Version See footnote
+F_OB_FAIL,364,364,denominator+numerator,Reporting Flag for Failed External Cephalic Version,,2016-2023,,Reporting Flag for Failed External Cephalic Version See footnote
+CO_SEQNUM,365,371,denominator+numerator,Cohort Sequence Number,,2016-2023,,"Cohort Sequence Number xxx,xxx- xxx,xxx"
+CO_DODYY,,,denominator+numerator,Cohort Year of Death,,2016-2018,,Cohort Year of Death 20XX
+CO_YOD,372,375,denominator+numerator,Cohort Year of Death,,2019-2023,,Cohort Year of Death 20XX
+FILLER34,376,382,denominator+numerator,Filler,,2016-2023,,Filler Blank
+LD_INDL,383,383,denominator+numerator,Induction of Labor,,2016-2023,,Induction of Labor 389 Y Yes
+LD_AUGM,384,384,denominator+numerator,Augmentation of Labor,,2016-2023,,Augmentation of Labor 390 N No
+LD_STER,385,385,denominator+numerator,Steroids,U,2016-2023,,Steroids 391 U Unknown or not stated
+LD_ANTB,386,386,denominator+numerator,Antibiotics,,2016-2023,,Antibiotics 392
+LD_CHOR,387,387,denominator+numerator,Chorioamnionitis,,2016-2023,,Chorioamnionitis 393
+LD_ANES,388,388,denominator+numerator,Anesthesia,,2016-2023,,Anesthesia 394
+F_LD_INDL,389,389,denominator+numerator,Reporting Flag for Induction of Labor,,2016-2023,,Reporting Flag for Induction of Labor See footnote
+F_LD_AUGM,390,390,denominator+numerator,Reporting Flag for Augmentation of Labor,,2016-2023,,Reporting Flag for Augmentation of Labor
+F_LD_STER,391,391,denominator+numerator,Reporting Flag for Steroids,,2016-2023,,Reporting Flag for Steroids
+F_LD_ANTB,392,392,denominator+numerator,Reporting Flag for Antibiotics,,2016-2023,,Reporting Flag for Antibiotics
+F_LD_CHOR,393,393,denominator+numerator,Reporting Flag for Chorioamnionitis,,2016-2023,,Reporting Flag for Chorioamnionitis
+F_LD_ANES,394,394,denominator+numerator,Reporting Flag for Anesthesia,,2016-2023,,Reporting Flag for Anesthesia
+NO_LBRDLV,395,395,denominator+numerator,No Characteristics of Labor Checked,,2016-2023,,No Characteristics of Labor Checked 1 True | 126 0 False | 9 Not Reported
+ME_PRES,401,401,denominator+numerator,Fetal Presentation,9,2016-2023,,Fetal Presentation 404 1 Cephalic | 2 Breech | 3 Other | 9 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+ME_ROUT,402,402,denominator+numerator,Final Route & Method of Delivery,9,2016-2023,,Final Route & Method of Delivery 1 Spontaneous | 405 2 Forceps | 3 Vacuum | 4 Cesarean | 9 Unknown or not stated
+ME_TRIAL,403,403,denominator+numerator,Trial of Labor Attempted,U,2016-2023,,Trial of Labor Attempted 406 Y Yes | N No | X Not applicable | U Unknown or not stated
+F_ME_PRES,404,404,denominator+numerator,Reporting Flag for Fetal Presentation,,2016-2023,,Reporting Flag for Fetal Presentation See footnote
+F_ME_ROUT,405,405,denominator+numerator,Reporting Flag for Final Route and Method of Delivery See footnote,,2016-2023,,Reporting Flag for Final Route and Method of Delivery See footnote
+F_ME_TRIAL,406,406,denominator+numerator,Reporting Flag for Trial of Labor Attempted,,2016-2023,,Reporting Flag for Trial of Labor Attempted See footnote
+RDMETH_REC,407,407,denominator+numerator,Delivery Method Recode,5;6;9,2016-2023,,Delivery Method Recode 409 1 Vaginal (excludes vaginal after previous C-section) | 2 Vaginal after previous c-section | 3 Primary C-section | 4 Repeat C-section | 5 Vaginal (unknown if previous c-section) | 6 C-section (unknown if previous c-section) | 9 Not stated
+DMETH_REC,408,408,denominator+numerator,Delivery Method Recode Combined,9,2016-2023,,Delivery Method Recode Combined 1 Vaginal | 2 C-Section | 9 Unknown
+F_DMETH_REC,409,409,denominator+numerator,Reporting Flag for Method of Delivery Recode,,2016-2023,,Reporting Flag for Method of Delivery Recode See footnote
+MM_MTR,415,415,denominator+numerator,Maternal Transfusion,,2016-2023,,Maternal Transfusion 421 Y Yes
+MM_PLAC,416,416,denominator+numerator,Perineal Laceration,,2016-2023,,Perineal Laceration 422 N No
+MM_RUPT,417,417,denominator+numerator,Ruptured Uterus,U,2016-2023,,Ruptured Uterus 423 U Unknown or not stated
+MM_UHYST,418,418,denominator+numerator,Unplanned Hysterectomy,,2016-2023,,Unplanned Hysterectomy 424
+MM_AICU,419,419,denominator+numerator,Admit to Intensive Care,,2016-2023,,Admit to Intensive Care 425
+F_MM_MTR,421,421,denominator+numerator,Reporting Flag for Maternal Transfusion,,2016-2023,,Reporting Flag for Maternal Transfusion See footnote
+F_MM_,422,422,denominator+numerator,PLAC,,2016-2023,,PLAC Reporting Flag for Perineal Laceration | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+F_MM_RUPT,423,423,denominator+numerator,Reporting Flag for Ruptured Uterus,,2016-2023,,Reporting Flag for Ruptured Uterus
+F_MM_UHYST,424,424,denominator+numerator,Reporting Flag for Unplanned Hysterectomy,,2016-2023,,Reporting Flag for Unplanned Hysterectomy
+F_MM_AICU,425,425,denominator+numerator,Reporting Flag for Admission to Intensive Care,,2016-2023,,Reporting Flag for Admission to Intensive Care
+NO_MMORB,427,427,denominator+numerator,No Maternal Morbidity Checked,,2016-2023,,No Maternal Morbidity Checked 1 True | 126 0 False | 9 Not Reported
+ATTEND,433,433,denominator+numerator,Attendant,9,2016-2023,,Attendant 1 Doctor of Medicine (MD) | 2 Doctor of Osteopathy (DO) | 3 Certified Nurse Midwife (CNM) | 4 Other Midwife | 5 Other | 9 Unknown or not stated
+MTRAN,434,434,denominator+numerator,Mother Transferred,U,2016-2023,,Mother Transferred 126 Y Yes | N No | U Unknown
+PAY,435,435,denominator+numerator,Payment Source,9,2016-2023,,"Payment Source 437 1 Medicaid | 2 Private Insurance | 3 Self-Pay | 4 Indian Health Service | 5 CHAMPUS/TRICARE | 6 Other Government (Federal, State, Local) | 8 Other | 9 Unknown"
+PAY_REC,436,436,denominator+numerator,Payment Recode,9,2016-2023,,Payment Recode 438 1 Medicaid | 2 Private Insurance | 3 Self Pay | 4 Other | 9 Unknown
+F_PAY,437,437,denominator+numerator,Reporting Flag for Source of Payment,,2016-2023,,Reporting Flag for Source of Payment See footnote
+F_PAY_REC,438,438,denominator+numerator,Reporting Flag for Payment Recode,,2016-2023,,Reporting Flag for Payment Recode See footnote
+APGAR5,444,445,denominator+numerator,Five Minute APGAR Score 447,99,2016-2023,,Five Minute APGAR Score 447 00-10 A score of 0-10 | 99 Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+APGAR5R,446,446,denominator+numerator,Five Minute APGAR Recode,5,2016-2023,,Five Minute APGAR Recode 1 A score of 0-3 | 447 2 A score of 4-6 | 3 A score of 7-8 | 4 A score of 9-10 | 5 Unknown or not stated
+F_APGAR5,447,447,denominator+numerator,Reporting Flag for Five minute APGAR,,2016-2023,,Reporting Flag for Five minute APGAR See footnote
+APGAR10,448,449,denominator+numerator,Ten Minute APGAR Score,99,2016-2023,,Ten Minute APGAR Score 00-10 A score of 0-10 | Use reporting flag in field 126 for 2018 88 Not applicable | 99 Unknown or not stated
+APGAR10R,450,450,denominator+numerator,Ten Minute APGAR Recode,5,2016-2023,,Ten Minute APGAR Recode 1 A score of 0-3 | Use reporting flag in field 126 for 2018 2 A score of 4-6 | 3 A score of 7-8 | 4 A score of 9-10 | 5 Not stated/not applicable
+f_APGAR10,451,451,denominator+numerator,Reporting Flag for Ten minute APGAR Score,,2019-2023,,Reporting Flag for Ten minute APGAR Score See footnote
+DPLURAL,454,454,denominator+numerator,Plurality Recode,,2016-2023,,Plurality Recode 1 Single | 2 Twin | 3 Triplet | 4 Quadruplet or higher
+IMP_PLUR,456,456,denominator+numerator,Plurality Imputed,,2016-2023,,Plurality Imputed Blank Plurality is imputed | 1 Plurality is not imputed
+SETORDER_R,459,459,denominator+numerator,Set Order Recode,9,2016-2023,,"Set Order Recode 126 1 1st , 2 2nd, 3 3rd, 4 4th, 5 5th to 16th | 9 Unknown or not stated"
+SEX,475,475,denominator+numerator,Sex of Infant,,2016-2023,,Sex of Infant M Male | F Female
+IMP_SEX,476,476,denominator+numerator,Imputed Sex,,2016-2023,,Imputed Sex Blank Infant Sex not Imputed | 1 Infant Sex is Imputed | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+DLMP_MM,477,478,denominator+numerator,Last Normal Menses Month,99,2016-2023,,Last Normal Menses Month 01 January | 02 February | 03 March | 04 April | 05 May | 06 June | 07 July | 08 August | 09 September | 10 October | 11 November | 12 December | 99 Unknown or not stated
+DLMP_YY,481,484,denominator+numerator,Last Normal Menses Year,9999,2016-2023,,Last Normal Menses Year nnnn Year of last normal menses | 9999 Unknown or not stated
+COMBGST_IMP,488,488,denominator+numerator,Combined Gestation Imputed,,2016-2023,,Combined Gestation Imputed Blank Combined Gestation is not imputed | 1 Combined Gestation is imputed
+OBGEST_FLG,489,489,denominator+numerator,Obstetric Estimate of Gestation Used Flag,,2016-2023,,Obstetric Estimate of Gestation Used Flag Blank Clinical Estimate is not used | 1 Clinical Estimate is used
+COMBGEST,490,491,denominator+numerator,Combined Gestation – Detail in Weeks,99,2016-2023,,Combined Gestation – Detail in Weeks 17-47 17th through 47th week of Gestation | 99 Unknown
+GESTREC10,492,493,denominator+numerator,Combined Gestation Recode 10,99,2016-2023,,Combined Gestation Recode 10 01 Under 20 weeks | 02 20-27 weeks | 03 28-31 weeks | 04 32-33 weeks | 05 34-36 weeks | 06 37-38 weeks | 07 39 weeks | 08 40 weeks | 09 41 weeks | 10 42 weeks and over | 99 Unknown
+GESTREC3,494,494,denominator+numerator,Combined Gestation Recode 3,3,2016-2023,,Combined Gestation Recode 3 1 Under 37 weeks | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 2 37 weeks and over | 3 Not stated
+LMPUSED,498,498,denominator+numerator,Computed (LMP) Gestation Used Flag,,2016-2023,,Computed (LMP) Gestation Used Flag Blank LMP not used for gestation | 1 LMP used for gestation
+OEGest_Comb,499,500,denominator+numerator,Obstetric Estimate Edited,99,2016-2023,,Obstetric Estimate Edited 17-47 Weeks of gestation | (NCHS Standard item) 99 Not stated
+OEGest_R10,501,502,denominator+numerator,Obstetric Estimate Recode10,99,2016-2023,,Obstetric Estimate Recode10 01 Under 20 weeks | (NCHS Standard item) 02 20-27 weeks | 03 28-31 weeks | 04 32-33 weeks | 05 34-36 weeks | 06 37-38 weeks | 07 39 weeks | 08 40 weeks | 09 41 weeks | 10 42 weeks and over | 99 Unknown
+OEGest_R3,503,503,denominator+numerator,Obstetric Estimate Recode 3,3,2016-2023,,Obstetric Estimate Recode 3 1 Under 37 weeks | (NCHS Standard Item) 2 37 weeks and over | 3 Not stated
+BWTR14,509,510,denominator+numerator,Birth Weight Recode 14,14,2016-2023,,Birth Weight Recode 14 01 227 - 499 grams | 02 500 – 749 grams | 03 750 – 999 grams | 04 1000 - 1249 grams | 05 1250 – 1499 grams | 06 1500 – 1999 grams | 07 2000 – 2499 grams | 08 2500 – 2999 grams | 09 3000 – 3499 grams | 10 3500 – 3999 grams | 11 4000 – 4499 grams | 12 4500 – 4999 grams | 13 5000 – 8165 grams | 14 Not Stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth
+BWTR4,511,511,denominator+numerator,Birth Weight Recode 4,4,2016-2023,,Birth Weight Recode 4 1 227 - 1499 grams | 2 1500 – 2499 grams | 3 2500 - 8165 grams | 4 Unknown or not stated
+BRTHWGT,512,515,denominator+numerator,Imputed Birth Weight,9999,2016-2023,,Imputed Birth Weight 0227-8165 Number of grams | 9999 Not stated birth weight
+BWTIMP,516,516,denominator+numerator,Birth Weight Imputed Flag,,2016-2023,,Birth Weight Imputed Flag Blank Birth Weight is not imputed | 1 Birth Weight is imputed | The following checkbox fields 517-566 include data for revised states only. For national data for items that are comparable across revisions | see fields 1340-1345.
+AB_AVEN1,517,517,denominator+numerator,Assisted Ventilation,,2016-2023,,Assisted Ventilation 524 Y Yes
+AB_AVEN6,518,518,denominator+numerator,Assisted Ventilation > 6 hrs 525,,2016-2023,,Assisted Ventilation > 6 hrs 525 N No
+AB_NICU,519,519,denominator+numerator,Admission to NICU,U,2016-2023,,Admission to NICU 526 U Unknown or not stated
+AB_SURF,520,520,denominator+numerator,Surfactant,,2016-2023,,Surfactant 527
+AB_ANTI,521,521,denominator+numerator,Antibiotics,,2016-2023,,Antibiotics 528
+AB_SEIZ,522,522,denominator+numerator,Seizures,,2016-2023,,Seizures 529
+F_AB_AVEN1,524,524,denominator+numerator,Reporting Flag for Assisted Ventilation,,2016-2023,,Reporting Flag for Assisted Ventilation See footnote
+F_AB_AVEN6,525,525,denominator+numerator,Reporting Flag for Assisted Ventilation >6 hrs,,2016-2023,,Reporting Flag for Assisted Ventilation >6 hrs
+F_AB_NICU,526,526,denominator+numerator,Reporting Flag for Admission to NICU,,2016-2023,,Reporting Flag for Admission to NICU
+F_AB_SURF,527,527,denominator+numerator,Reporting Flag for Surfactant,,2016-2023,,Reporting Flag for Surfactant
+F_AB_ANTI,528,528,denominator+numerator,Reporting Flag for Antibiotics,,2016-2023,,Reporting Flag for Antibiotics
+F_AB_SEIZ,529,529,denominator+numerator,Reporting Flag for Seizures,,2016-2023,,Reporting Flag for Seizures
+NO_ABNORM,531,531,denominator+numerator,No Abnormal Conditions Checked,,2016-2023,,No Abnormal Conditions Checked 1 True | 126 0 False | 9 Not Reported
+CA_ANEN,537,537,denominator+numerator,Anencephaly,,2016-2023,,Anencephaly 543 Y Yes
+CA_MNSB,538,538,denominator+numerator,Meningomyelocele / Spina Bifida 544,,2016-2023,,Meningomyelocele / Spina Bifida 544 N No | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+CA_CCHD,539,539,denominator+numerator,Cyanotic Congenital Heart Disease 545,U,2016-2023,,Cyanotic Congenital Heart Disease 545 U Unknown or not stated
+CA_CDH,540,540,denominator+numerator,Congenital Diaphragmatic Hernia 546,,2016-2023,,Congenital Diaphragmatic Hernia 546
+CA_OMPH,541,541,denominator+numerator,Omphalocele,,2016-2023,,Omphalocele 547
+CA_GAST,542,542,denominator+numerator,Gastroschisis,,2016-2023,,Gastroschisis 548
+F_CA_ANEN,543,543,denominator+numerator,Reporting Flag for Anencephaly,,2016-2023,,Reporting Flag for Anencephaly See footnote
+F_CA_MNSB,544,544,denominator+numerator,Flag for Meningomyelocele/Spina Bifida,,2016-2023,,Flag for Meningomyelocele/Spina Bifida
+F_CA_CCHD,545,545,denominator+numerator,Reporting Flag for Cyanotic Congenital Heart Disease,,2016-2023,,Reporting Flag for Cyanotic Congenital Heart Disease
+F_CA_CDH,546,546,denominator+numerator,Reporting Flag for Congenital Diaphragmatic Hernia,,2016-2023,,Reporting Flag for Congenital Diaphragmatic Hernia
+F_CA_OMPH,547,547,denominator+numerator,Reporting Flag for Omphalocele,,2016-2023,,Reporting Flag for Omphalocele
+F_CA_GAST,548,548,denominator+numerator,Reporting Flag for Gastroschisis,,2016-2023,,Reporting Flag for Gastroschisis
+CA_LIMB,549,549,denominator+numerator,Limb Reduction Defect,,2016-2023,,Limb Reduction Defect 555 Y Yes
+CA_CLEFT,550,550,denominator+numerator,Cleft Lip w/ or w/o Cleft Palate 556,,2016-2023,,Cleft Lip w/ or w/o Cleft Palate 556 N No
+CA_CLPAL,551,551,denominator+numerator,Cleft Palate alone,U,2016-2023,,Cleft Palate alone 557 U Unknown or not stated
+CA_DOWN,552,552,denominator+numerator,Down Syndrome,U,2016-2023,,Down Syndrome 558 C Confirmed | P Pending | N No | U Unknown
+CA_DISOR,553,553,denominator+numerator,Suspected Chromosomal Disorder,U,2016-2023,,Suspected Chromosomal Disorder C Confirmed | 559 P Pending | N No | U Unknown
+CA_HYPO,554,554,denominator+numerator,Hypospadias,U,2016-2023,,"Hypospadias 560 Y Yes, anomaly reported | N No, anomaly not reported | U Unknown"
+F_CA_LIMB,555,555,denominator+numerator,Reporting Flag for Limb Reduction Defect,,2016-2023,,Reporting Flag for Limb Reduction Defect See footnote
+F_CA_CLEFT,556,556,denominator+numerator,Flag for Cleft Lip with or without Cleft Palate,,2016-2023,,Flag for Cleft Lip with or without Cleft Palate
+F_CA_CLPAL,557,557,denominator+numerator,Reporting Flag for Cleft Plate Alone,,2016-2023,,Reporting Flag for Cleft Plate Alone
+F_CA_DOWN,558,558,denominator+numerator,Reporting Flag for Down Syndrome,,2016-2023,,Reporting Flag for Down Syndrome
+F_CA_DISOR,559,559,denominator+numerator,Reporting Flag for Suspected Chromosomal Disorder,,2016-2023,,Reporting Flag for Suspected Chromosomal Disorder
+F_CA_HYPO,560,560,denominator+numerator,Reporting Flag for Hypospadias,,2016-2023,,Reporting Flag for Hypospadias
+NO_CONGEN,561,561,denominator+numerator,No Congenital Anomalies Checked,,2016-2023,,No Congenital Anomalies Checked 1 True | 126 0 False | 9 Not Reported
+ITRAN,567,567,denominator+numerator,Infant Transferred,U,2016-2023,,Infant Transferred 126 Y Yes | N No | U Unknown or not stated | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+ILIVE,568,568,denominator+numerator,Infant Living at Time of Report,U,2016-2023,,Infant Living at Time of Report Y Yes | 126 N No | U Unknown or not stated
+BFED,569,569,denominator+numerator,Infant Being Breastfed,U,2016-2023,,Infant Being Breastfed 570 Y Yes | N No | U Unknown or not stated
+F_BFED,570,570,denominator+numerator,Reporting Flag for Breastfed at Discharge,,2016-2023,,Reporting Flag for Breastfed at Discharge See footnote
+FILLER54,571,1345,denominator+numerator,Filler,,2016-2023,2016:571-1329,Filler Blank
+uBFacil,,,denominator+numerator,Place of birth,9,2016-2016,,Place of birth 1 Hospital | 2 Freestanding Birthing Center | 3 Clinic / Doctor’s Office | 4 Residence | 5 Other | 9 Unknown | 1331-1345 Unrevised Check Boxes All checkbox items below follow this coding structure: 1 Yes | 2 No | 9 Unknown
+uRF_Diab,,,denominator+numerator,Diabetes,,2016-2016,,Diabetes
+uRF_Chype,,,denominator+numerator,Chronic Hypertension,,2016-2016,,Chronic Hypertension
+uRF_Phype,,,denominator+numerator,Prepregnacy Associated Hypertension,,2016-2016,,Prepregnacy Associated Hypertension
+uRf_Ehype,,,denominator+numerator,Eclampsia,,2016-2016,,Eclampsia 338
+uME_Forc,,,denominator+numerator,Forceps,,2016-2016,,Forceps
+uME_Vacu,,,denominator+numerator,Vacuum,,2016-2016,,Vacuum
+uOB_Indu,,,denominator+numerator,Induction of Labor,,2016-2016,,Induction of Labor
+uLD_Bree,,,denominator+numerator,Breech,,2016-2016,,Breech
+uCA_Anen,,,denominator+numerator,Anencephaly,,2016-2016,,Anencephaly
+uCA_Spina,,,denominator+numerator,Spina Bifida / Meningocele,,2016-2016,,Spina Bifida / Meningocele
+uCA_Omph,,,denominator+numerator,Omphalocele / Gastroschisis,,2016-2016,,Omphalocele / Gastroschisis
+uCA_Clip,,,denominator+numerator,Cleft Lip / Palate,,2016-2016,,Cleft Lip / Palate
+uCA_Hern,,,denominator+numerator,Diaphragmatic Hernia,,2016-2016,,Diaphragmatic Hernia
+uCA_Down,,,denominator+numerator,Down Syndrome,,2016-2016,,Down Syndrome
+FLGND,1346,1346,denominator+numerator,Match Status,,2016-2023,,Match Status 1 Record in both files | Blank Record not in both files | The Denominator file section of the files ends here. Documentation of the Mortality | Section of the Numerator (Linked) file begins on the next page. | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+FILLER55,1347,1355,numerator only,Filler,,2016-2023,,Filler Blank
+AGEDX,1356,1358,numerator only,Age at Death in Days,0,2018-2023,,"Age at Death in Days 000 0 days, also includes unknown hours and | minutes and when reporting errors for date of | death | 001-364 Number of days"
+AGED,,,numerator only,Age at Death in Days,,2016-2017,,Age at Death in Days 000-365 Number of days
+AGER5,,,numerator only,Infant age recode 5,,2016-2017,,Infant age recode 5 1 Under 1 hour | 2 1 – 23 hours | 3 1 – 6 days | 4 7 – 27 days (late neonatal) | 5 28 days and over (postneonatal)
+AGER5X,1359,1359,numerator only,Infant age recode 5,1,2018-2023,,"Infant age recode 5 1 Under 1 hour, also includes unknown hours and | minutes, and when reporting errors for date of | death | 2 1 – 23 hours | 3 1 – 6 days | 4 7 – 27 days (late neonatal) | 5 28 days and over (postneonatal)"
+AGER22X,1360,1361,numerator only,Infant age recode 22,1,2018-2023,,"Infant age recode 22 Blank Age 1 year and over or not stated | 01 Under 1 hour (includes unknown hours and | minutes, and when reporting errors for date of | death) | 02 1 – 23 hours | 03 1 day | 04 2 days | 05 3 days | 06 4 days | 07 5 days | 08 6 days | 09 7 days | 10 14 – 20 days | 11 21 – 27 days | 12 1 month | 13 2 months | 14 3 months | 15 4 months | 16 5 months | 17 6 months | 18 7 months |"
+AGER22,,,numerator only,Infant age recode 22,1;7,2016-2017,,Infant age recode 22 Blank Age 1 year and over or not stated | 01 Under 1 hour (includes not stated hours and | minutes) | 02 1 – 23 hours | 03 1 day (includes not stated days) | 04 2 days | 05 3 days | 06 4 days | 07 5 days | 08 6 days | 09 7 days (includes not stated weeks) | 10 14 – 20 days | 11 21 – 27 days | 12 1 month (includes not stated months) | 13 2 months | 14 3 months | 15 4 months | 1
+MANNER,1362,1362,numerator only,Manner of Death,,2016-2023,,Manner of Death 1 Accident | 2 Suicide | 3 Homicide | 4 Pending investigation | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 5 Could not determine | 6 Self-inflicted | 7 Natural | Blank Not specified
+DISPO,1363,1363,numerator only,Method of Disposition,U,2016-2023,,Method of Disposition B Burial | C Cremation | O Other | U Unknown
+AUTOPSY,1364,1364,numerator only,Autopsy,U,2016-2023,,Autopsy Y Yes | N No | U Unknown
+FILLER56,1365,1365,numerator only,Filler,,2016-2023,,Filler Blank
+PLACE,1366,1366,numerator only,"Place of injury for causes W00-Y34, except Y06.-",,2016-2023,,"Place of injury for causes W00-Y34, except Y06.- 0 Home | and Y07.- 1 Residential institution | 2 School, other institution and public | administrative area | 3 Sports and athletics area | 4 Street and highway | 5 Trade and service area | 6 Industrial and construction area | 7 Farm | 8 Other Specified Places | 9 Unspecified place | Blank Cause other than W00-Y34, except Y06.- and | Y07.-"
+UC0D,,,numerator only,ICD Code (10th Revision),,2016-2017,,"ICD Code (10th Revision) | See the International Classification of Diseases, 1992 | Revision, Volume 1."
+UCOD,1368,1371,numerator only,ICD Code (10th Revision),,2018-2023,,"ICD Code (10th Revision) | See the International Classification of Diseases, 1992 | Revision, Volume 1."
+FILLER57,1372,1372,numerator only,Filler,,2016-2023,,Filler Blank
+UCODR130,1373,1375,numerator only,130 Infant Cause Recode,,2016-2023,,130 Infant Cause Recode
+FILLER58,1376,1376,numerator only,Filler,,2016-2023,,Filler Blank
+RECWT,1377,1384,numerator only,Record Weight for period file,,2016-2023,,Record Weight for period file 1.0-1.XXXXXX | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+FILLER59,1385,1386,numerator only,Filler,,2016-2023,,Filler Blank | MULTIPLE CONDITIONS
+EANUM,1387,1388,numerator only,Number of Entity-Axis Conditions,,2016-2023,,Number of Entity-Axis Conditions 00-20 Code range
+ENTITY,1389,1528,numerator only,Entity-Axis Conditions,,2016-2023,,"Entity-Axis Conditions | Space has been provided for a maximum of 20 conditions. Each condition takes 7 positions in the record. The 7th | position will be blank. Records that do not have 20 conditions are blank in the unused area. | 1 … Part I, line 1 (a) | 2 … Part I, line 2 (b) | 3 … Part I, line 3 (c) | 4 … Part I, line 4 (d) | 5 … Part I, line 5 (e) | 6 … Part II, | 1-7 … Code range | 1389-13"
+FILLER60,1529,1530,numerator only,Filler,,2016-2023,,Filler Blank | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year
+RANUM,1531,1532,numerator only,Number of Record-Axis Conditions,,2016-2023,,Number of Record-Axis Conditions 00-20 Code range
+RECORD,1533,1632,numerator only,Record-Axis Conditions,,2016-2023,,"Record-Axis Conditions | Space has been provided for a maximum of 20 conditions. Each condition takes 5 positions in the | record. The 5th position will be blank. Records that do not have 20 conditions are blank in the unused area. | 1533-1537 5 P,G 1st Condition | 1538-1542 5 P,G 2nd Condition | 1543-1547 5 P,G 3rd Condition | 1548-1552 5 P,G 4th Condition | 1553-1557 5 P,G 5th Condition | 1558-1"
+FILLER61,1633,1669,numerator only,Filler,,2016-2023,,Filler Blank
+HOSPD,1670,1670,numerator only,Place of Death and Decendent’s Status,9,2016-2023,,"Place of Death and Decendent’s Status 1 Hospital, clinic or Medical Center – Inpatient | 2 Hospital, clinic or Medical Center – Outpatient or | admitted to Emergency Room | 3 Hospital, clinic or Medical Center – Dead on | Arrival | 4 Decedent’s home | 5 Hospice facility | 6 Nursing home/long term care | 7 Other | 9 Place of death unknown"
+DWEEKDAY,1671,1671,numerator only,Day of Week of Death,9,2016-2023,,Day of Week of Death 1 Sunday | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 2 Monday | 3 Tuesday | 4 Wednesday | 5 Thursday | 6 Friday | 7 Saturday | 9 Unknown
+DOD_YY,1672,1675,numerator only,Death Year,,2016-2023,,Death Year 2023 2023
+FILLER62,1676,1741,numerator only,Filler,,2016-2023,,Filler
+DOD_MM,1742,1743,numerator only,Month of Death,,2016-2023,,Month of Death 01 January | 02 February | 03 March | 04 April | 05 May | 06 June | 07 July | 08 August | 09 September | 10 October | 11 November | 12 December | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | ADDENDUM | Detailed geographic information for the territories.

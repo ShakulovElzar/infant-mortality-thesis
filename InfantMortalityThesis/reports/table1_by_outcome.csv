@@ -1,0 +1,77 @@
+variable,code,category,n_Survivor,n_Death,pct_Survivor,pct_Death
+Cigarettes per day before pregnancy,0,None,27512045,142775,92.58,85.82
+Cigarettes per day before pregnancy,1,1-5,555660,5696,1.87,3.42
+Cigarettes per day before pregnancy,2,6-10,696192,6977,2.34,4.19
+Cigarettes per day before pregnancy,3,11-20,693628,6848,2.33,4.12
+Cigarettes per day before pregnancy,4,21-40,105011,1154,0.35,0.69
+Cigarettes per day before pregnancy,5,41+,21565,236,0.07,0.14
+Cigarettes per day before pregnancy,6,Unknown,131873,2681,0.44,1.61
+Gestational diabetes,N,No,27520388,157399,92.61,94.61
+Gestational diabetes,U,Unknown,34541,742,0.12,0.45
+Gestational diabetes,Y,Yes,2161045,8226,7.27,4.94
+Gestational hypertension,N,No,27299580,152155,91.87,91.46
+Gestational hypertension,U,Unknown,34541,742,0.12,0.45
+Gestational hypertension,Y,Yes,2381853,13470,8.02,8.1
+Infant sex,F,Female,14525912,73988,48.88,44.47
+Infant sex,M,Male,15190062,92379,51.12,55.53
+Live birth order,1,1st,11325199,61740,38.11,37.11
+Live birth order,2,2nd,9477916,46073,31.9,27.69
+Live birth order,3,3rd,5021417,27887,16.9,16.76
+Live birth order,4,4th,2200678,14751,7.41,8.87
+Live birth order,5,5th,878324,7271,2.96,4.37
+Live birth order,6,6th,373321,3494,1.26,2.1
+Live birth order,7,7th,170061,1730,0.57,1.04
+Live birth order,8,8th or more,183856,1994,0.62,1.2
+Live birth order,9,Unknown,85202,1427,0.29,0.86
+Mother's age,1,<15,14694,232,0.05,0.14
+Mother's age,2,15-19,1333496,12017,4.49,7.22
+Mother's age,3,20-24,5530903,38106,18.61,22.9
+Mother's age,4,25-29,8453219,45443,28.45,27.31
+Mother's age,5,30-34,8744557,40258,29.43,24.2
+Mother's age,6,35-39,4586092,23043,15.43,13.85
+Mother's age,7,40-44,976278,6558,3.29,3.94
+Mother's age,8,45-49,68677,627,0.23,0.38
+Mother's age,9,50-54,8058,83,0.03,0.05
+Mother's education,1,8th grade or less,938813,6086,3.16,3.66
+Mother's education,2,"9-12th, no diploma",2630175,21756,8.85,13.08
+Mother's education,3,High school/GED,7632150,54579,25.68,32.81
+Mother's education,4,Some college,5652858,33185,19.02,19.95
+Mother's education,5,Associate,2456681,11704,8.27,7.04
+Mother's education,6,Bachelor's,6218024,20772,20.92,12.49
+Mother's education,7,Master's,2907275,8606,9.78,5.17
+Mother's education,8,Doctorate/professional,849284,2192,2.86,1.32
+Mother's education,9,Unknown,430714,7487,1.45,4.5
+Mother's nativity,1,Born in the U.S.,22935648,134456,77.18,80.82
+Mother's nativity,2,Born outside the U.S.,6720347,29993,22.62,18.03
+Mother's nativity,3,Unknown,59979,1918,0.2,1.15
+Mother's race/Hispanic origin,1,NH White,15211137,68859,51.19,41.39
+Mother's race/Hispanic origin,2,NH Black,4224272,45802,14.22,27.53
+Mother's race/Hispanic origin,3,NH AIAN,220318,1862,0.74,1.12
+Mother's race/Hispanic origin,4,NH Asian,1844435,6466,6.21,3.89
+Mother's race/Hispanic origin,5,NH NHOPI,76781,627,0.26,0.38
+Mother's race/Hispanic origin,6,NH more than one race,675684,4404,2.27,2.65
+Mother's race/Hispanic origin,7,Hispanic,7190122,35016,24.2,21.05
+Mother's race/Hispanic origin,8,Unknown,273225,3331,0.92,2.0
+Payment source,1,Medicaid,12370468,90032,41.63,54.12
+Payment source,2,Private insurance,14873575,60584,50.05,36.42
+Payment source,3,Self-pay,1209979,7676,4.07,4.61
+Payment source,4,Other,1054920,5933,3.55,3.57
+Payment source,9,Unknown,207032,2142,0.7,1.29
+Plurality,1,Single,28756419,144501,96.77,86.86
+Plurality,2,Twin,935009,20325,3.15,12.22
+Plurality,3,Triplet,23396,1372,0.08,0.82
+Plurality,4,Quadruplet+,1067,126,0.0,0.08
+Plurality,5,Code 5 (not in guide; 2016-2019 only),83,43,0.0,0.03
+Pre-pregnancy BMI,1,Underweight <18.5,872206,5188,2.94,3.12
+Pre-pregnancy BMI,2,Normal 18.5-24.9,11850691,52304,39.88,31.44
+Pre-pregnancy BMI,3,Overweight 25.0-29.9,7830641,39536,26.35,23.76
+Pre-pregnancy BMI,4,Obesity I 30.0-34.9,4568497,28186,15.37,16.94
+Pre-pregnancy BMI,5,Obesity II 35.0-39.9,2279899,16478,7.67,9.9
+Pre-pregnancy BMI,6,Obesity III >=40,1644974,13984,5.54,8.41
+Pre-pregnancy BMI,9,Unknown,669066,10691,2.25,6.43
+Pre-pregnancy diabetes,N,No,29378392,161967,98.86,97.36
+Pre-pregnancy diabetes,U,Unknown,34541,742,0.12,0.45
+Pre-pregnancy diabetes,Y,Yes,303041,3658,1.02,2.2
+Pre-pregnancy hypertension,N,No,28974878,158183,97.51,95.08
+Pre-pregnancy hypertension,U,Unknown,34541,742,0.12,0.45
+Pre-pregnancy hypertension,Y,Yes,706555,7442,2.38,4.47
