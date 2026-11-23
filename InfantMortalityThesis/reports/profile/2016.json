@@ -1,0 +1,46 @@
+{
+  "cohort": 2016,
+  "zip": "2017PE2016CO.zip",
+  "denominator_member": "VS16LINK.DENOMUS_2026_06_04.txt",
+  "numerator_members": [
+    "VS16LINK.Public.USNUMPUB_2019_08_26",
+    "VS17LINK.Public.USNUMPUB_R2019_05_20"
+  ],
+  "denominator_record_lengths": {
+    "1346": 1000
+  },
+  "numerator_record_lengths": {
+    "1743": 45359
+  },
+  "denominator_records": 3956112,
+  "us_resident_births": 3945875,
+  "cohort_deaths_in_numerators": 22893,
+  "deaths_matched_to_births": 22893,
+  "unmatched_deaths": 0,
+  "neonatal_deaths_lt28d": 15185,
+  "imr_per_1000": 5.802,
+  "missing_pct": {
+    "MAGER": 0.0,
+    "MEDUC": 1.305,
+    "DMAR": 0.0,
+    "PRECARE": 2.866,
+    "CIG_0": 0.488,
+    "BMI": 2.76,
+    "RF_PDIAB": 0.096,
+    "RF_GDIAB": 0.096,
+    "RF_PHYPE": 0.096,
+    "RF_GHYPE": 0.096,
+    "PAY": 0.621,
+    "COMBGEST": 0.088,
+    "BRTHWGT": 0.027,
+    "AB_NICU": 0.112
+  },
+  "positive_pct": {
+    "RF_PDIAB": 0.857,
+    "RF_GDIAB": 5.952,
+    "RF_PHYPE": 1.733,
+    "RF_GHYPE": 5.973,
+    "AB_NICU": 8.729
+  },
+  "seconds": 36
+}

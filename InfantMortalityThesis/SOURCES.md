@@ -11,8 +11,9 @@ Main portal: https://www.cdc.gov/nchs/data_access/VitalStatsOnline.htm
 | 2019 | https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/period-cohort-linked/2020PE2019CO.zip | 438,388,388 |
 | 2018 | https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/period-cohort-linked/2019PE2018CO.zip | 447,265,743 |
 | 2017 | https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/period-cohort-linked/2018PE2017CO.zip | 451,827,431 |
+| 2016 | https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/period-cohort-linked/2017PE2016CO.zip | 460,879,295 |
 
-Total downloaded CDC ZIPs: 3,075,540,725 bytes (3.08 GB, or 2.86 GiB). `DOWNLOADS.md` records SHA-256 checksums and integrity checks.
+Total downloaded CDC ZIPs: 3,536,420,020 bytes (3.54 GB, eight cohorts 2016–2023). `DOWNLOADS.md` records SHA-256 checksums and integrity checks.
 
 The ZIPs include period and cohort components. Use the birth-cohort denominator and matching numerator for the intended cohort. Exact member names must be inspected after download. See the [2024 period/2023 cohort guide](https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Dataset_Documentation/DVS/period-cohort-linked/24PE23CO_linkedUG.pdf).
 
@@ -31,3 +32,8 @@ The 2023-cohort archive contains four files (2023 cohort denominator and numerat
 - CDC SVI: https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html
 
 Public CDC individual records have no county identifiers; county sources can be joined only to aggregate WONDER output. See https://www.cdc.gov/nchs/nvss/dvs_data_release.htm .
+
+## Future references (planned, not used yet)
+
+- **CDC WONDER Linked Birth / Infant Death Records, 2017–2023 Expanded:** https://wonder.cdc.gov/lbd.html (help: https://wonder.cdc.gov/wonder/help/lbd-expanded.html). Online aggregate queries, free after accepting the data-use terms. Planned uses: (1) check our cohort counts and rates by year, maternal risk factor, birth weight and gestation against official tables; (2) a separate state- or large-county-level analysis. WONDER output is aggregate and suppresses small cells, so it cannot add columns to individual CDC records. Note that WONDER rates are period-based by default; compare like with like.
+- **NCHS fetal-death files:** https://www.cdc.gov/nchs/data_access/VitalStatsOnline.htm (guide: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Dataset_Documentation/DVS/fetaldeath/2023fetaluserguide.pdf). Possible perinatal sensitivity check for live-birth selection.

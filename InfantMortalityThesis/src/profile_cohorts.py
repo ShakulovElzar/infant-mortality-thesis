@@ -13,7 +13,7 @@ zp, outdir = sys.argv[1], pathlib.Path(sys.argv[2])
 cohort = int(re.search(r'PE(\d{4})CO', zp).group(1))
 z = zipfile.ZipFile(zp)
 names = z.namelist()
-den = [n for n in names if 'DENPUB' in n and yr(n) == cohort][0]
+den = [n for n in names if ('DENPUB' in n or 'DENOM' in n) and yr(n) == cohort][0]
 nums = [n for n in names if 'NUMPUB' in n and yr(n) in (cohort, cohort + 1)]
 f = lambda r, a, b: r[a-1:b].decode('latin-1')
 
