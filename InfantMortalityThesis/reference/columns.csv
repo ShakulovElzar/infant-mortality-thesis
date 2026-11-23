@@ -124,8 +124,8 @@ OB_FAIL,361,361,denominator+numerator,Failed External Cephalic Version,U,2016-20
 F_OB_SUCC,363,363,denominator+numerator,Reporting Flag for Successful External Cephalic Version,,2016-2023,,Reporting Flag for Successful External Cephalic Version See footnote
 F_OB_FAIL,364,364,denominator+numerator,Reporting Flag for Failed External Cephalic Version,,2016-2023,,Reporting Flag for Failed External Cephalic Version See footnote
 CO_SEQNUM,365,371,denominator+numerator,Cohort Sequence Number,,2016-2023,,"Cohort Sequence Number xxx,xxx- xxx,xxx"
-CO_DODYY,,,denominator+numerator,Cohort Year of Death,,2016-2018,,Cohort Year of Death 20XX
 CO_YOD,372,375,denominator+numerator,Cohort Year of Death,,2019-2023,,Cohort Year of Death 20XX
+CO_DODYY,,,denominator+numerator,Cohort Year of Death,,2016-2018,,Cohort Year of Death 20XX
 FILLER34,376,382,denominator+numerator,Filler,,2016-2023,,Filler Blank
 LD_INDL,383,383,denominator+numerator,Induction of Labor,,2016-2023,,Induction of Labor 389 Y Yes
 LD_AUGM,384,384,denominator+numerator,Augmentation of Labor,,2016-2023,,Augmentation of Labor 390 N No
@@ -256,8 +256,8 @@ AGEDX,1356,1358,numerator only,Age at Death in Days,0,2018-2023,,"Age at Death i
 AGED,,,numerator only,Age at Death in Days,,2016-2017,,Age at Death in Days 000-365 Number of days
 AGER5,,,numerator only,Infant age recode 5,,2016-2017,,Infant age recode 5 1 Under 1 hour | 2 1 – 23 hours | 3 1 – 6 days | 4 7 – 27 days (late neonatal) | 5 28 days and over (postneonatal)
 AGER5X,1359,1359,numerator only,Infant age recode 5,1,2018-2023,,"Infant age recode 5 1 Under 1 hour, also includes unknown hours and | minutes, and when reporting errors for date of | death | 2 1 – 23 hours | 3 1 – 6 days | 4 7 – 27 days (late neonatal) | 5 28 days and over (postneonatal)"
-AGER22X,1360,1361,numerator only,Infant age recode 22,1,2018-2023,,"Infant age recode 22 Blank Age 1 year and over or not stated | 01 Under 1 hour (includes unknown hours and | minutes, and when reporting errors for date of | death) | 02 1 – 23 hours | 03 1 day | 04 2 days | 05 3 days | 06 4 days | 07 5 days | 08 6 days | 09 7 days | 10 14 – 20 days | 11 21 – 27 days | 12 1 month | 13 2 months | 14 3 months | 15 4 months | 16 5 months | 17 6 months | 18 7 months |"
 AGER22,,,numerator only,Infant age recode 22,1;7,2016-2017,,Infant age recode 22 Blank Age 1 year and over or not stated | 01 Under 1 hour (includes not stated hours and | minutes) | 02 1 – 23 hours | 03 1 day (includes not stated days) | 04 2 days | 05 3 days | 06 4 days | 07 5 days | 08 6 days | 09 7 days (includes not stated weeks) | 10 14 – 20 days | 11 21 – 27 days | 12 1 month (includes not stated months) | 13 2 months | 14 3 months | 15 4 months | 1
+AGER22X,1360,1361,numerator only,Infant age recode 22,1,2018-2023,,"Infant age recode 22 Blank Age 1 year and over or not stated | 01 Under 1 hour (includes unknown hours and | minutes, and when reporting errors for date of | death) | 02 1 – 23 hours | 03 1 day | 04 2 days | 05 3 days | 06 4 days | 07 5 days | 08 6 days | 09 7 days | 10 14 – 20 days | 11 21 – 27 days | 12 1 month | 13 2 months | 14 3 months | 15 4 months | 16 5 months | 17 6 months | 18 7 months |"
 MANNER,1362,1362,numerator only,Manner of Death,,2016-2023,,Manner of Death 1 Accident | 2 Suicide | 3 Homicide | 4 Pending investigation | 1/ Flag Definitions: 0 Not reported in birth year1 Reported in birth year | 5 Could not determine | 6 Self-inflicted | 7 Natural | Blank Not specified
 DISPO,1363,1363,numerator only,Method of Disposition,U,2016-2023,,Method of Disposition B Burial | C Cremation | O Other | U Unknown
 AUTOPSY,1364,1364,numerator only,Autopsy,U,2016-2023,,Autopsy Y Yes | N No | U Unknown

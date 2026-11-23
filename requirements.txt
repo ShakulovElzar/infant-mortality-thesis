@@ -9,3 +9,4 @@ matplotlib
 notebook
 polars
 duckdb
+papermill

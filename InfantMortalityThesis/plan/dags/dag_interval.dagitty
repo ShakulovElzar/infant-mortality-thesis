@@ -1,0 +1,40 @@
+// Part 2 DAG, exposure = IPI (interpregnancy interval), births with an earlier pregnancy only.
+// Same nodes as the shared model, plus: IPI, PriorLoss = earlier fetal death/termination (PRIORTERM),
+// PriorDead = earlier child now dead (PRIORDEAD), PrevPTB = previous preterm birth (RF_PPB),
+// Uprior = unmeasured causes shared by earlier and current pregnancy outcomes.
+// IPI -> BMI: weight kept after the earlier pregnancy, so BMI is a mediator here (not adjusted).
+dag {
+IPI [exposure]
+Death [outcome]
+U [latent]
+Uprior [latent]
+Age -> { Edu Parity Smoke0 BMI HTN DM Death }
+Race -> { Edu Pay Smoke0 BMI HTN DM Death }
+Nativity -> { Edu Smoke0 BMI HTN Death }
+Edu -> { Pay Smoke0 BMI Death }
+Pay -> { Smoke0 HTN DM Death }
+Parity -> { Smoke0 BMI HTN Death }
+Smoke0 -> { BMI HTN DM GA BW Death }
+BMI -> { HTN DM GA Death }
+Year -> { BMI HTN DM Death }
+HTN -> { GA BW Death }
+DM -> { GA BW Death }
+U -> { GA Death }
+GA -> { BW Death }
+BW -> Death
+Age -> IPI
+Race -> IPI
+Nativity -> IPI
+Edu -> IPI
+Pay -> IPI
+Parity -> IPI
+Smoke0 -> IPI
+Year -> IPI
+PriorLoss -> IPI
+PriorDead -> IPI
+PrevPTB -> IPI
+Uprior -> { PriorLoss PriorDead PrevPTB GA Death }
+Age -> { PriorLoss PrevPTB }
+Race -> { PriorDead PrevPTB }
+IPI -> { BMI HTN GA BW Death }
+}

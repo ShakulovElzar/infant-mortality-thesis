@@ -1,0 +1,24 @@
+// Part 2 DAG, exposure = Smoke0. Paste into https://dagitty.net (Model > Model code).
+// Age=maternal age, Race=race/Hispanic origin, Edu=education, Pay=payment source (SES),
+// Smoke0=pre-pregnancy smoking, HTN/DM=pre-pregnancy hypertension/diabetes, BMI=pre-pregnancy BMI,
+// GA=gestational age, BW=birth weight (mediators), U=unmeasured causes of preterm birth and death.
+// Shared model for HTN, DM, BMI and Smoke0 (edges into Smoke0 and Smoke0 -> BMI, DM added 23 Nov 2026).
+dag {
+Smoke0 [exposure]
+Death [outcome]
+U [latent]
+Age -> { Edu Parity Smoke0 BMI HTN DM Death }
+Race -> { Edu Pay Smoke0 BMI HTN DM Death }
+Nativity -> { Edu Smoke0 BMI HTN Death }
+Edu -> { Pay Smoke0 BMI Death }
+Pay -> { Smoke0 HTN DM Death }
+Parity -> { Smoke0 BMI HTN Death }
+Smoke0 -> { BMI HTN DM GA BW Death }
+BMI -> { HTN DM GA Death }
+Year -> { BMI HTN DM Death }
+HTN -> { GA BW Death }
+DM -> { GA BW Death }
+U -> { GA Death }
+GA -> { BW Death }
+BW -> Death
+}

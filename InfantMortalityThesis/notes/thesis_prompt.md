@@ -24,7 +24,7 @@ STEP 0 — Analysis plan (before any exposure–outcome result is computed)
 - Draw one DAG per Part-2 exposure (dagitty syntax).
 
 STEP 1 — Data build and benchmark
-- src/build_parquet.py: read each cohort ZIP once (stream, no extraction),
+- 00_data_build.ipynb: read each cohort ZIP once (stream, no extraction),
   keep ALL birth-record fields plus the death fields (age at death, UCOD,
   UCODR130, manner), write one Parquet file per cohort to an ignored folder.
 - Build columns.csv (name, positions, codes, missing codes) from the guides;
@@ -59,14 +59,18 @@ PART 1 — Prediction with all factors known before birth
   (3) leakage check: any single input with ROC-AUC > 0.80 alone must be
   investigated before results are reported.
 
-PART 2 — Association for three maternal factors, one at a time
+PART 2 — Association for five maternal factors, one at a time
 - Exposures, each in its OWN model with its OWN DAG-based confounder set:
   (1) pre-pregnancy hypertension (RF_PHYPE), (2) pre-pregnancy diabetes
-  (RF_PDIAB), (3) pre-pregnancy BMI class (BMI_R; reference 18.5–24.9).
+  (RF_PDIAB), (3) pre-pregnancy BMI class (BMI_R; reference 18.5–24.9),
+  (4) smoking before pregnancy (CIG_0 > 0 vs 0), (5) interval since the
+  last pregnancy (ILP_R minus this pregnancy's length; reference 18–23
+  months; births with an earlier pregnancy only). (4) and (5) added
+  23 Nov 2026 before any Part 2 result; definitions in the plan.
 - Population: singleton births (DPLURAL = 1).
 - Confounders: per DAG (see plan). Never adjust for gestational age or
   birth weight in the main model.
-- Model: modified Poisson GLM (log link, robust SE; fitted on covariate-pattern counts, src/modified_poisson.py) for
+- Model: modified Poisson GLM (log link, robust SE; fitted on covariate-pattern counts, notebooks/04_association.ipynb) for
   adjusted risk ratios; g-computation risk difference per 1,000 births
   with 95% CI; E-value for each main RR.
 - Replication: estimate per cohort (8 cohorts), forest plot, Cochran's Q.
@@ -76,7 +80,7 @@ PART 2 — Association for three maternal factors, one at a time
   demonstration: refit with gestational age added, report and explain;
   (4) complete-case first, then test whether missing BMI/covariates relate
   to death; multiple imputation only if they do.
-- Multiple testing: 3 exposures × 3 outcomes; report all 9 results;
+- Multiple testing: 5 exposures × 3 outcomes; report all 15 results;
   Holm-adjusted p-values as a sensitivity analysis.
 
 NOTEBOOK DOCUMENTATION (applies to every notebook)
@@ -97,8 +101,10 @@ NOTEBOOK DOCUMENTATION (applies to every notebook)
   time it appears.
 
 Tools: DuckDB or polars on Parquet, statsmodels, scikit-learn,
-tableone, matplotlib; Jupyter notebooks 01_benchmark, 02_table1,
-03_prediction, 04_association, 05_checks, importing shared code from src/.
+tableone, matplotlib; Jupyter notebooks 00_data_build, 01_benchmark,
+02_table1, 03_prediction, 04_association, 05_checks. ALL code lives in the
+notebooks (amended 23 Nov 2026); code shared by several notebooks goes in
+notebooks/functions.ipynb, loaded with %run. No src/ folder.
 Pin versions in requirements.lock. Commit notebooks WITH outputs
 (tables, plots, metrics), but never commit row-level data: outputs may
 show only aggregated counts, rates and model results.

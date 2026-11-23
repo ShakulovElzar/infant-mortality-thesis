@@ -5,3 +5,5 @@ Bachelor's thesis research for University of Messina L-31 Data Analysis. Topic: 
 ## Status
 
 23 Nov 2026: removed earlier topics (satellite yield MVPs, drug/omics pilots, old research and reports, `data/`) to the macOS Trash on the SSD. Kept infant-mortality notes in `InfantMortalityThesis/notes/`. All eight cohorts (2016–2023) profiled and checked against CDC counts; JupyterLab venv at `.venv`. See `InfantMortalityThesis/AGENTS.md`.
+
+Peer reference (git-ignored): `InfantMortalityThesis/docs/peer_reference/` holds a peer's L-31 thesis, notebook and report, plus `comparison.md`. Never commit it.
