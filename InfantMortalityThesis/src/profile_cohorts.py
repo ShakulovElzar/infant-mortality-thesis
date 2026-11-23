@@ -17,6 +17,11 @@ den = [n for n in names if 'DENPUB' in n and yr(n) == cohort][0]
 nums = [n for n in names if 'NUMPUB' in n and yr(n) in (cohort, cohort + 1)]
 f = lambda r, a, b: r[a-1:b].decode('latin-1')
 
+def key(r):
+    # 2017 denominator pads CO_SEQNUM with spaces, numerators with zeros: compare as numbers.
+    seq = f(r, 365, 371).strip()
+    return (int(seq), f(r, 372, 375)) if seq else None
+
 deaths, num_len = {}, collections.Counter()
 for name in nums:
     with z.open(name) as fh:
@@ -24,7 +29,7 @@ for name in nums:
             num_len[len(r.rstrip(b'\r\n'))] += 1
             if f(r, 9, 12) != str(cohort) or int(f(r, 104, 104)) >= 4:
                 continue
-            deaths[(f(r, 365, 371), f(r, 372, 375))] = int(f(r, 1356, 1358))
+            deaths[key(r)] = int(f(r, 1356, 1358))
 
 # (label, start, end, missing codes, positive codes)
 FIELDS = [
@@ -54,8 +59,8 @@ for r in z.open(den):
     if int(f(r, 104, 104)) >= 4:
         continue
     res += 1
-    k = (f(r, 365, 371), f(r, 372, 375))
-    if k in deaths:
+    k = key(r)
+    if k and k in deaths:
         matched += 1
         neo += deaths[k] < 28
     for lab, a, b, mc, pc in FIELDS:

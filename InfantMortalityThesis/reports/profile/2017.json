@@ -15,10 +15,10 @@
   "denominator_records": 3864754,
   "us_resident_births": 3855500,
   "cohort_deaths_in_numerators": 22167,
-  "deaths_matched_to_births": 2654,
-  "unmatched_deaths": 19513,
-  "neonatal_deaths_lt28d": 142,
-  "imr_per_1000": 0.688,
+  "deaths_matched_to_births": 22167,
+  "unmatched_deaths": 0,
+  "neonatal_deaths_lt28d": 14789,
+  "imr_per_1000": 5.749,
   "missing_pct": {
     "MAGER": 0.0,
     "MEDUC": 1.285,
@@ -42,5 +42,5 @@
     "RF_GHYPE": 6.44,
     "AB_NICU": 8.972
   },
-  "seconds": 56
+  "seconds": 46
 }
