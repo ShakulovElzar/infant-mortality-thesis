@@ -19,7 +19,7 @@ Already computed before this date: counts, join checks and per-year missing/posi
 | `death_1y` | linked death, `AGEDX` 0–364 | main |
 | `death_neo` | `AGEDX` 0–27 | secondary |
 | `death_postneo` | `AGEDX` 28–364; survivors past 27 days only | secondary |
-| `death_accident` | `UCODR130` = 139, accidents (V01–X59) | negative control, Part 2 only |
+| `death_accident` | `UCODR130` in 141–145 or 148–151: accidents **except** suffocation (transport, falls, firearms, drowning, choking on objects, fire, poisoning, other); about 1,850 deaths in 2016–2023 | negative control, Part 2 only (amended 23 Nov 2026, see change log) |
 
 ## 3. Part 1: prediction from information known before delivery
 
@@ -68,7 +68,7 @@ Already computed before this date: counts, join checks and per-year missing/posi
 - **Not used:** marital status (California not released 2017+) and father's items (missing is linked to marital status).
 - **Note on the layout:** the guide prints `BMI_R` code 4 as "30.0–39.9", but code 5 is 35.0–39.9, so code 4 = 30.0–34.9.
 
-**Model:** modified Poisson GLM (log link, robust sandwich SE, `statsmodels`), fitted **per cohort** to fit in memory. The 8 cohort estimates are pooled by fixed-effect inverse-variance meta-analysis; random-effects (DerSimonian–Laird) is a sensitivity analysis. Main estimate: pooled adjusted risk ratio (RR) with 95% CI.
+**Model:** modified Poisson GLM (log link, robust sandwich SE), fitted **per cohort**. All covariates are categories, so each model is fitted on counts per covariate pattern (births *n* and deaths *d* in each combination of categories), not on single births. This gives exactly the same estimates as the single-birth model, and the robust (HC0) covariance is also exact, because each birth's squared score in a pattern is d(1−μ)² + (n−d)μ² summed over the pattern. Code: `src/modified_poisson.py`, checked against `statsmodels` on synthetic data before use. The 8 cohort estimates are pooled by fixed-effect inverse-variance meta-analysis; random-effects (DerSimonian–Laird) is a sensitivity analysis. Main estimate: pooled adjusted risk ratio (RR) with 95% CI.
 
 **Absolute effect:** g-computation risk difference per 1,000 births, standardized to the exposure's own covariate distribution. The 95% CI comes from 1,000 draws of the coefficients from their robust covariance matrix.
 
@@ -80,6 +80,11 @@ Already computed before this date: counts, join checks and per-year missing/posi
 3. Negative control: the adjusted RR for `death_accident`. If its CI overlaps the main RR's CI and excludes 1.0, residual confounding is likely, and the main claim is weakened.
 4. Collider demonstration: refit with gestational age (weeks) added. Report and explain; this is not a result about the effect.
 5. Missing data: complete-case first. Compare missingness of BMI and each covariate by outcome (descriptive). If the death rate differs by more than 20% (relative) between records with and without a value, run multiple imputation (20 imputations, chained equations) as a sensitivity analysis.
+   **Triggered** (Table 1: BMI unknown for 6.4% of deaths vs 2.3% of survivors). Details, fixed 23 Nov 2026 before any Part 2 result:
+   - *Imputed:* pre-pregnancy BMI class (`BMI_R`) and mother's education (`MEDUC`), the two items whose missingness is clearly linked to death. Other covariates with small missingness (payment, race, nativity, parity, smoking; each ≤ 1%) stay complete-case in both analyses.
+   - *Imputation models:* multinomial logistic regression for each of the two items, by chained equations (5 cycles), per cohort. Predictors: the other imputed item, pre-pregnancy hypertension and diabetes, all other confounders, plurality, and the outcomes `death_1y` and `death_neo` (an imputation model must include the outcome). Fitted on covariate-pattern counts, like the main models.
+   - *Proper imputation:* for each of the 20 imputations, the imputation model is refitted on a bootstrap resample (Poisson weights) of the observed records, so the imputed values carry the uncertainty of the imputation model.
+   - *Analysis:* the same modified Poisson models on each completed data set; log RRs and their robust variances combined with Rubin's rules, then pooled over cohorts as in the main analysis.
 
 **Multiple testing:** 3 exposures × 3 outcomes = 9 main results, all reported. Holm-adjusted p-values are a sensitivity analysis.
 
@@ -101,3 +106,4 @@ Already computed before this date: counts, join checks and per-year missing/posi
 | 23 Nov 2026 | Missing-data check (section 4, check 5) already triggered by Table 1: BMI unknown 6.4% of deaths vs 2.3% of survivors. Multiple imputation is required as a sensitivity analysis. | Descriptive Table 1, before any model. |
 | 23 Nov 2026 | Part 1 implementation details: logistic regression uses normalized weights and tol 1e-6 (the default stopped before convergence); calibration is fitted with a low-memory Newton solver (same model as statsmodels, which ran out of memory at 7 M rows); permutation importance uses all test deaths + 1 in 10 test survivors (weight 10). | Technical; no change to inputs, splits, models or rules. |
 | 23 Nov 2026 | **Post-hoc sensitivity (added after seeing the importance results):** Sets A and B refit without `precare` (month prenatal care began), `illb` and `ilp` (birth intervals). | All three depend on pregnancy length: care cannot start after the birth, and CDC measures intervals up to this birth, so preterm births shorten them. This is the same timing leakage that excluded `PREVIS`. The original results stay the pre-registered main results; the strict results are reported next to them. |
+| 23 Nov 2026 | **Part 2 fixes, made before any Part 2 result was computed.** (1) Negative-control outcome: `UCODR130` 141–145 and 148–151 (accidents without suffocation), instead of 139. (2) Models fitted on covariate-pattern counts with exact robust covariance (`src/modified_poisson.py`, checked by `src/check_modified_poisson.py` on synthetic data). (3) Multiple-imputation details written out (section 4, check 5). | (1) Code 139 is a subtotal and is never recorded (0 deaths); 75% of the coded accidents are suffocation in bed (W75), which is linked to preterm birth, so hypertension could affect it through the infant and it would not be a clean negative control. (2) Lower memory, same results. (3) MI was triggered by Table 1; the plan had no details. |

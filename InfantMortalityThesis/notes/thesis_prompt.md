@@ -66,12 +66,12 @@ PART 2 — Association for three maternal factors, one at a time
 - Population: singleton births (DPLURAL = 1).
 - Confounders: per DAG (see plan). Never adjust for gestational age or
   birth weight in the main model.
-- Model: modified Poisson GLM (log link, robust SE, statsmodels) for
+- Model: modified Poisson GLM (log link, robust SE; fitted on covariate-pattern counts, src/modified_poisson.py) for
   adjusted risk ratios; g-computation risk difference per 1,000 births
   with 95% CI; E-value for each main RR.
 - Replication: estimate per cohort (8 cohorts), forest plot, Cochran's Q.
-- Pre-set checks: (1) negative-control outcome = accident deaths
-  (UCODR130 = 139); the claim is weakened if its RR is similar to the main
+- Pre-set checks: (1) negative-control outcome = accident deaths without
+  suffocation (UCODR130 141–145, 148–151; amended 23 Nov 2026); the claim is weakened if its RR is similar to the main
   RR; (2) direction must agree in at least 7 of 8 cohorts; (3) collider
   demonstration: refit with gestational age added, report and explain;
   (4) complete-case first, then test whether missing BMI/covariates relate
