@@ -1,0 +1,8 @@
+# Raw data and source documents: large, keep out of Git
+InfantMortalityThesis/data/
+InfantMortalityThesis/docs/
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+InfantMortalityThesis/notes/infant_mortality_supervisor_email.md
