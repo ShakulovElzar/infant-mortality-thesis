@@ -1,0 +1,20 @@
+part,check,rule,result,status,note
+Step 1,Record counts vs user guides,"births and deaths equal the guide, every cohort","births 7/8, deaths 8/8",PASS,"2020 guide prints 3,549,826 births: a typo; the file and NCHS agree on 3,619,826"
+Step 1,CDC Documentation Table 2 reproduced,"every rate within 0.01 per 1,000","exact in 6 cohorts (2018-2023); off in [2016, 2017]",FAIL,"Failures come from CDC's tables, not our data: the 2016 file was re-released with birth weight for 2,493 births the guide lists as not stated; the 2017 guide copies all-races deaths into the NH White rows."
+Part 1,1. Best model beats age + race model,"PR-AUC difference > 0, 95% CI excludes 0",0.0293 (0.0277 to 0.0308),PASS,""
+Part 1,2. Calibration slope,0.9 <= slope <= 1.1,0.942 (0.933 to 0.950); O/E 1.03,PASS,CI excludes 1: predictions slightly too spread out
+Part 1,3. Single-input leakage,no input alone has ROC-AUC > 0.80,highest feduc 0.626,PASS,"The check missed timing leakage spread over precare, illb, ilp (found by importance)."
+Part 1,Post-hoc: model without timing items,not pre-set; reported next to the main result,Set B PR-AUC 0.0300 (0.0288-0.0314) vs 0.0380,INFO,The strict numbers are the more honest estimate of what is known before delivery.
+Part 2,Model code vs statsmodels,"coefficients, robust SE and RD agree to < 1e-8","beta 1.3e-12, SE 4.7e-12, RD 4.3e-12",PASS,""
+Part 2,DAG adjustment sets (back-door),every set valid; every set + gestational age invalid,"5/5 valid, 5/5 invalid with GA",PASS,Valid under the drawn DAGs; the DAGs themselves are assumptions for the supervisor to review.
+Part 2,1. Direction in >= 7 of 8 cohorts (infant death),>= 7/8 cohorts on the pooled side of 1,13/13 exposure classes,PASS,""
+Part 2,"1b. Direction, secondary outcomes",>= 7/8 cohorts,23/26 classes,INFO,"Below 7: bmi 25-29.9 postneonatal (5/8, RR 1.02); interval 12-17 mo neonatal (6/8, RR 1.02); interval 24-59 mo neonatal (5/8, RR 0.99) - all RRs close to 1"
+Part 2,2. Heterogeneity,I2 > 50% -> random effects is the main result,5/39 rows with I2 > 50%,APPLIED,diabetes yes infant (I2 57%); bmi 35-39.9 infant (I2 66%); bmi 35-39.9 neonatal (I2 63%); smoking any infant (I2 79%); smoking any postneonatal (I2 74%); RRs almost unchanged
+Part 2,3. Negative control: hypertension,accident-death RR excludes 1 and overlaps the main RR -> weakened,yes: 1.03 (0.76-1.40),PASS,"few accident deaths in the exposed (44), so the test is weak"
+Part 2,3. Negative control: diabetes,accident-death RR excludes 1 and overlaps the main RR -> weakened,yes: 0.80 (0.47-1.36),PASS,"few accident deaths in the exposed (14), so the test is weak"
+Part 2,3. Negative control: bmi,accident-death RR excludes 1 and overlaps the main RR -> weakened,<18.5: 1.27 (0.99-1.62); 25-29.9: 1.02 (0.90-1.16); 30-34.9: 1.25 (1.09-1.44); 35-39.9: 1.04 (0.86-1.25); >=40: 1.13 (0.92-1.39),WEAKENED,weakened for 30-34.9
+Part 2,3. Negative control: smoking,accident-death RR excludes 1 and overlaps the main RR -> weakened,any: 1.81 (1.57-2.08),WEAKENED,weakened for any
+Part 2,3. Negative control: interval,accident-death RR excludes 1 and overlaps the main RR -> weakened,<6 mo: 1.54 (1.20-1.99); 6-11 mo: 1.47 (1.15-1.87); 12-17 mo: 1.14 (0.88-1.48); 24-59 mo: 0.99 (0.78-1.25); >=60 mo: 1.14 (0.88-1.48),WEAKENED,"weakened for <6 mo, 6-11 mo"
+Part 2,4. Collider demonstration (adjust for gestational age),report and explain; not a result,hypertension yes: 1.50 -> 0.90; diabetes yes: 1.84 -> 1.18; bmi >=40: 1.53 -> 1.29; smoking any: 1.68 -> 1.35; interval <6 mo: 1.22 -> 1.13,INFO,Shows why the main models do not adjust for gestational age (hypertension reverses below 1).
+Part 2,5. Missing data -> multiple imputation,relative death-rate difference > 20% triggers imputation,"triggered for 13/13 items; after imputing BMI, education, interval the largest RR change is 1.2%",APPLIED,The plan sets no pass/fail rule for the size of the change; no conclusion changes (assumes missing at random given the model items).
+Part 2,"Multiple testing (Holm, 15 tests)",sensitivity: Holm-adjusted p-values,all 15 significant; largest Holm p = 4.2e-38,INFO,""

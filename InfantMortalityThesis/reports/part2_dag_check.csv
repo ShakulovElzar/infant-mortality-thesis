@@ -1,0 +1,6 @@
+exposure,set,valid,valid_with_GA,unadjusted_valid
+hypertension,"Age, Race, Nativity, Edu, Pay, Parity, Year, Smoke0, BMI",true,false,false
+diabetes,"Age, Race, Nativity, Edu, Pay, Parity, Year, Smoke0, BMI",true,false,false
+bmi,"Age, Race, Nativity, Edu, Pay, Parity, Year, Smoke0",true,false,false
+smoking,"Age, Race, Nativity, Edu, Pay, Parity, Year",true,false,false
+interval,"Age, Race, Nativity, Edu, Pay, Parity, Year, Smoke0, PriorLoss, PriorDead, PrevPTB",true,false,false
