@@ -74,7 +74,7 @@ None of these changed a published number after it was reported, except item 9 (t
 
 ### B. Weak points that remain (say them in the limitations)
 1. **Timing leakage in Part 1.** Three inputs carry a little information about pregnancy length. The pre-registered numbers (0.038) are optimistic; the strict model (0.030) is the honest headline. *Action:* lead with the strict numbers in the text.
-2. **Residual social confounding in Part 2.** The negative control flags smoking, short intervals and BMI 30–34.9. Read these RRs as upper bounds.
+2. **Residual social confounding in Part 2.** The negative control flags smoking, short intervals and BMI 30–34.9. Extra social markers explain part of it for smoking (RR 1.68 → 1.58), none of it for short intervals. Read these RRs as upper bounds.
 3. **Exposure recording.** Hypertension, diabetes and smoking come from birth-certificate check boxes and self-report, which miss some cases. The direction of the resulting bias is not certain.
 4. **Live births only.** These factors also cause stillbirths. Babies who survive to be born may be selected, which can bias the RRs (usually toward 1).
 5. **No geography, no income.** The public files have no state or county since 2005, and no income.
@@ -85,7 +85,7 @@ None of these changed a published number after it was reported, except item 9 (t
 10. **Plan changes after Part 1.** Two exposures and the age-split extension were added after Part 1 results were seen (no Part 2 result was known). This is recorded, but an examiner may ask about it.
 
 ### C. Possible improvements, ranked by value for the thesis
-1. **Test the social-confounding explanation (about 1 hour).** Refit smoking and interval with extra social proxies (WIC, marital status where released, father's information missing) and check whether the RR moves toward the negative-control RR. This directly addresses the main weakness.
+1. **DONE 24 Nov 2026: test of the social-confounding explanation** (`04_association` section 18). Adding marital status, WIC and father's information lowers the smoking RR from 1.68 to **1.58** and its accident RR from 1.81 to 1.66; the short-interval RRs do not change; hypertension, diabetes and BMI are unchanged or slightly higher. So social confounding explains part of the smoking signal, not the interval signal; both stay upper bounds.
 2. **Lead with strict Part 1 results** in the text (no code).
 3. **Quantitative bias analysis for exposure misclassification (about 2 hours plus reading).** Use published sensitivity values of birth-certificate items to show how much the RRs could change.
 4. **Stillbirth sensitivity (larger).** Add the CDC fetal-death files (listed in `SOURCES.md`) and repeat Part 2 for fetal + infant death.
