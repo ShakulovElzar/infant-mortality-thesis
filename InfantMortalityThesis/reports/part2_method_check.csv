@@ -1,2 +1,2 @@
 check,beta_max_diff,se_max_rel_diff,rd_abs_diff,status
-modified Poisson on pattern counts vs statsmodels (synthetic data),1.312727704316785e-12,4.679145959585185e-12,4.2579273440424e-12,PASS
+modified Poisson on pattern counts vs statsmodels (synthetic data),1.312727704316785e-12,4.681810494844285e-12,4.2579273440424e-12,PASS

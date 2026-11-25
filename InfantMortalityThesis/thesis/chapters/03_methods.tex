@@ -1,0 +1,55 @@
+\chapter{Material and Methods}
+\label{ch:methods}
+
+\section{Data Source and Study Population}
+% 8 birth cohorts 2016--2023; join on CO_SEQNUM + CO_YOD; RESTATUS < 4; 29,882,341 births, 166,367 deaths.
+% Source: AGENTS.md, notebooks/00_data_build.
+\todo{Write.}
+
+\section{Data Build and Validation}
+% Layouts parsed from the CDC user guides; Parquet build; benchmark vs guide counts and Documentation Table 2.
+% Source: notebooks/00_data_build, 01_benchmark; reference/benchmark_*.csv.
+\todo{Write.}
+
+\section{Descriptive Analysis and Missing Data}
+% Source: notebooks/02_table1; reports/table1_*.csv.
+\todo{Write.}
+
+\section{Pre-Registered Analysis Plan}
+% plan/analysis_plan.md v1.0 (23 Nov 2026), pass/fail rules fixed before results, dated change log.
+\todo{Write.}
+
+\section{Part 1: Prediction}
+\subsection{Input Sets}
+% Set A (early pregnancy), Set B (before delivery); excluded items and why.
+\subsection{Validation Protocol}
+% Train 2016--2020 (all deaths + 1 in 10 survivors, weight 10), tune 2021, test 2022--2023 once.
+\subsection{Models}
+% (a) base rate, (b) age + race logistic, (c) penalized logistic, (d) histogram gradient boosting.
+% Limitation: 3-setting grid, best at the edge (GitHub issue #5).
+\subsection{Metrics and Uncertainty}
+% PR-AUC (main), ROC-AUC, Brier, calibration; 1,000 Poisson bootstrap resamples.
+\subsection{Importance and Timing Leakage}
+% Grouped permutation importance; strict model without precare, illb, ilp (issue #4: more timing items remain).
+\subsection{Neonatal and Postneonatal Models}
+\todo{Write all subsections. Source: notebooks/03_prediction, notes/03_prediction_explained.md.}
+
+\section{Part 2: Association}
+\subsection{Exposures and Outcomes}
+% Gestational age from COMBGEST: justify or add OEGest_Comb sensitivity (issue #3).
+\subsection{Confounder Selection with DAGs}
+\subsection{Modified Poisson Regression on Pattern Counts}
+\subsection{Pooling over Cohorts and Absolute Effects}
+\subsection{Pre-Set Checks}
+% Direction, heterogeneity, negative control, collider demonstration, missing data.
+\subsection{Multiple Imputation and Sensitivity Analyses}
+\todo{Write all subsections. Source: notebooks/04_association.}
+
+\section{Extra Analyses (Post-Hoc)}
+% E1 cause of death, E2 recording bias, E3 stillbirths, E4 mediation, E5 decision curves, E6 external BMI check.
+% Source: notebooks/06_extra_research; plan change log 25 Nov 2026.
+\todo{Write.}
+
+\section{Software and Reproducibility}
+% Python 3.12, DuckDB, Polars, scikit-learn, statsmodels; requirements.lock; seed 20261123; notebooks 00--06.
+\todo{Write.}
