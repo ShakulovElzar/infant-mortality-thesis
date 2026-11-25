@@ -1,0 +1,4 @@
+params,tune_pr_auc,n_iter,new
+"{""learning_rate"": 0.05, ""max_leaf_nodes"": 127, ""min_samples_leaf"": 2000}",0.03702615322554415,240,false
+"{""learning_rate"": 0.05, ""max_leaf_nodes"": 255, ""min_samples_leaf"": 2000}",0.03681702289236536,210,true
+"{""learning_rate"": 0.03, ""max_leaf_nodes"": 127, ""min_samples_leaf"": 2000}",0.037219776465308996,451,true

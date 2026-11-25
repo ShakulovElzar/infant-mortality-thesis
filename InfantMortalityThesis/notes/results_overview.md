@@ -23,6 +23,7 @@
 | Mother's age + race only | 0.0087 | 0.61 |
 | Gradient boosting, all pre-delivery items | **0.038** | **0.74** |
 | Same, without the 3 items that leak pregnancy length (strict) | **0.030** | 0.72 |
+| Same, also without gestational diabetes, gestational hypertension, WIC (strict-2) | **0.0275** | 0.72 |
 
 - **In plain terms:** the 10% of births the model ranks highest contain 37.5% of all infant deaths. In the top 1%, about 1 baby in 16 dies, against 1 in 180 overall.
 - The probabilities are close overall but not exact (calibration slope 0.94; 3% more deaths observed than predicted). By risk decile, deciles 1–9 are under-predicted by 1–13% and the top decile is over-predicted by 5%.
@@ -47,7 +48,7 @@ Adjusted for confounders chosen from a DAG, singleton births, pooled over 8 coho
 - **BMI** shows a dose–response; the interval shows a U-shape (also a small excess at ≥ 60 months).
 - **Smoking** is linked twice as strongly to late deaths (RR 2.02) as to early deaths (1.41), which fits sudden unexpected infant death.
 - **Robust:** all 8 cohorts agree in direction; multiple imputation of missing BMI, education and interval changes no RR by more than 1.2%.
-- **Negative control:** babies of smokers also die 1.8 times as often in accidents, which smoking cannot cause. So part of the smoking and short-interval associations comes from unmeasured social differences. The diabetes, hypertension and severe-obesity results pass this test (though with few accident deaths).
+- **Negative control:** babies of smokers also die 1.8 times as often in accidents. Smoking can cause house fires, but without fire, choking and poisoning deaths the accident RR is still 1.59 (1.33–1.89). So part of the smoking and short-interval associations comes from unmeasured social differences. The diabetes, hypertension and severe-obesity results pass this test (though with few accident deaths).
 - **Collider demonstration:** if you adjust for gestational age, hypertension falsely looks protective (1.50 → 0.90). This is why studies that "control for preterm birth" can mislead.
 - **Real-life value:** the strongest, cleanest signals (diabetes, hypertension, severe obesity) are conditions that exist **before** pregnancy and can be treated. This supports **preconception care**: control blood sugar and blood pressure and support weight management *before* conception, not only during pregnancy. Diabetes, hypertension and BMI ≥ 35 together account for roughly 1,300 excess infant deaths a year among U.S. singletons if the associations are causal (an upper figure: some mothers have more than one factor, so the sum counts them twice). The excess deaths per year are a rough figure: RD × exposed births ÷ 8 years, and they assume causality.
 
@@ -66,7 +67,7 @@ All post-hoc; every rule was written in the plan before its run.
 | Does each factor act through the cause its biology predicts? | Diabetes → birth defects (RR 2.59 vs 1.64 for other causes); smoking → SUID (2.51 vs 1.40); hypertension → P07 code: no | Specific links support a real effect; poverty alone would raise all causes evenly |
 | Can check-box errors explain the RRs? | No. Usual errors make the RRs too low (hypertension 1.50 → 1.75, smoking 1.68 → 2.18) | The Part 2 numbers are probably conservative |
 | Do live births hide part of the harm? | Diabetes 1.84 → 2.48 and hypertension 1.50 → 1.74 with stillbirths | Preconception control of diabetes prevents stillbirths too, not only infant deaths |
-| How much runs through earlier delivery? | Hypertension all of it (1.03); diabetes two thirds; BMI ≥ 40 half; smoking one third | For hypertension, preventing early delivery is the lever; for smoking, safe-sleep advice matters too (SUID) |
+| How much runs through earlier delivery? | Upper bounds: hypertension most of it (1.03; 1.16 with the obstetric gestational age); diabetes two thirds or more (0.67–0.88); BMI ≥ 40 half; smoking one third (0.36) | For hypertension, preventing early delivery is the lever; for smoking, safe-sleep advice matters too (SUID) |
 | Is the Part 1 model useful for a program? | Net benefit over "contact all / none" at every threshold 0.25–5% | Example: at a 1% threshold the model flags 10.4% of births with a net gain of 10.8 per 10,000 births |
 
 ---
@@ -88,7 +89,7 @@ All post-hoc; every rule was written in the plan before its run.
 None of these changed a published number after it was reported, except item 9 (text only).
 
 ### B. Weak points that remain (say them in the limitations)
-1. **Timing leakage in Part 1.** Three inputs carry a little information about pregnancy length. The pre-registered numbers (0.038) are optimistic; the strict model (0.030) is the honest headline. *Action:* lead with the strict numbers in the text.
+1. **Timing leakage in Part 1.** Three inputs carry a little information about pregnancy length. The pre-registered numbers (0.038) are optimistic; the strict model (0.030) and the strict-2 model (0.0275, also without gestational diabetes, gestational hypertension and WIC) are the honest range. *Action:* lead with the strict numbers in the text.
 2. **Residual social confounding in Part 2.** The negative control flags smoking, short intervals and BMI 30–34.9. Extra social markers explain part of it for smoking (RR 1.68 → 1.58), none of it for short intervals. Read these RRs as upper bounds.
 3. **Exposure recording.** Hypertension, diabetes and smoking come from birth-certificate check boxes and self-report, which miss some cases. *Addressed 25 Nov 2026* (`06_extra_research` section 5): with published sensitivities the RRs stay above 1; the usual (non-differential) errors make them too low. The diabetes priors are assumptions (no validation value found).
 4. **Live births only.** These factors also cause stillbirths. *Tested 25 Nov 2026* (`06_extra_research` section 6): with fetal deaths the diabetes RR rises from 1.84 to 2.48 (BIASED by the 20% rule) and hypertension from 1.50 to 1.74. The live-birth RRs under-state the harm. The interval could not be tested (not on the fetal file).
@@ -108,3 +109,13 @@ None of these changed a published number after it was reported, except item 9 (t
 
 ### D. Is the code finished?
 Yes, for the planned analysis: data build, benchmark, Table 1, Part 1 (with strict and age-split analyses), Part 2 (with imputation and all checks), and the checks table. Items C1, C3 and C4 are done (C3 and C4 in `06_extra_research`); C2 is a writing task; C5 is a 5-minute fix.
+
+### E. Audit of 25 Nov 2026 (GitHub issues #1–#5, all post-hoc)
+| # | Problem | Result |
+|---|---|---|
+| 1 | Mediation assumes no gestational-age–death confounding, which the collider check contradicts | Proportions mediated are reported as upper bounds; with the obstetric estimate the hypertension direct-effect RR is 0.92 (< 1), the signature of that bias |
+| 2 | Accident deaths include fire, which smoking can cause | Without fire, choking and poisoning: smoking accident RR 1.59 (1.33–1.89); still WEAKENED |
+| 3 | Gestational age from `COMBGEST`, not the NCHS obstetric estimate | 24% of singletons change class; interval RRs change ≤ 1.1%; collider RRs move further from the main RRs (hypertension 0.90 → 0.84); conclusions unchanged |
+| 4 | Strict Part 1 model still had timing items | Strict-2 (also without gestational diabetes, gestational hypertension, WIC): PR-AUC 0.0275 (0.0263–0.0288) |
+| 5 | Tuning grid of 3 settings | Best new setting gains +0.0002 on the test years; no hidden better model |
+

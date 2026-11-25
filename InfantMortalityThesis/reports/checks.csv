@@ -44,3 +44,8 @@ Extra,E5. Decision curve: any death: strict Set B,"net benefit - max(treat all, 
 Extra,E5. Decision curve: neonatal,"net benefit - max(treat all, 0): 95% CI above 0",useful at 9 of 9 thresholds (0.25-5%),INFO,""
 Extra,E5. Decision curve: postneonatal: original,"net benefit - max(treat all, 0): 95% CI above 0",useful at 5 of 9 thresholds (0.25-1.5%),INFO,""
 Extra,E5. Decision curve: postneonatal: recalibrated,"net benefit - max(treat all, 0): 95% CI above 0",useful at 4 of 9 thresholds (0.25-1%),INFO,""
+Audit,"#4. Strict-2 model (also without gestational diabetes, gestational hypertension, WIC)",not pre-set; reported next to the strict model,PR-AUC 0.0275 (0.0263-0.0288) vs strict 0.0300; difference 0.0025 (0.0021-0.0029),INFO,""
+Audit,#5. Wider boosting grid for Set B (chosen on 2021),tested on 2022-2023 only if a new setting wins on 2021,"2021 PR-AUC old best 0.0370, best new 0.0372; test 0.0382 vs 0.0380",INFO,""
+Audit,#2. Smoking negative control without fire / home hazards,same rule as check 3,all accidents (pre-set): 1.81 (1.57-2.08); without fire (149): 1.75 (1.51-2.03); without home hazards (148-150): 1.59 (1.33-1.89),WEAKENED,Fire explains a small part; the signal remains.
+Audit,"#3. Obstetric-estimate gestational age (interval, collider demonstration)",robust if no RR changes by > 5%,interval max change 1.1%; collider max change 10.6%,INFO,"Interval robust; collider RRs move further (hypertension 0.90 -> 0.84), same conclusion."
+Audit,#1/#3. Mediation with obstetric-estimate gestational age (upper bounds),pre-set expectations judged again,hypertension 1.16 (1.10-1.22); diabetes 0.88 (0.85-0.93); smoking 0.36 (0.34-0.37),INFO,Proportions mediated are upper bounds: the collider check shows unmeasured gestational-age-death confounding.

@@ -26,17 +26,18 @@
 % Train 2016--2020 (all deaths + 1 in 10 survivors, weight 10), tune 2021, test 2022--2023 once.
 \subsection{Models}
 % (a) base rate, (b) age + race logistic, (c) penalized logistic, (d) histogram gradient boosting.
-% Limitation: 3-setting grid, best at the edge (GitHub issue #5).
+% Audit #5: 2 extra settings on 2021; retuned model +0.0002 on test (03 section 10, reports/part1_audit*.csv).
 \subsection{Metrics and Uncertainty}
 % PR-AUC (main), ROC-AUC, Brier, calibration; 1,000 Poisson bootstrap resamples.
 \subsection{Importance and Timing Leakage}
-% Grouped permutation importance; strict model without precare, illb, ilp (issue #4: more timing items remain).
+% Grouped permutation importance; strict model without precare, illb, ilp (0.030);
+% strict-2 also without gdiab, ghype, wic: 0.0275 (audit #4, 03 section 10).
 \subsection{Neonatal and Postneonatal Models}
 \todo{Write all subsections. Source: notebooks/03_prediction, notes/03_prediction_explained.md.}
 
 \section{Part 2: Association}
 \subsection{Exposures and Outcomes}
-% Gestational age from COMBGEST: justify or add OEGest_Comb sensitivity (issue #3).
+% Gestational age from COMBGEST (pre-registered); OEGest_Comb sensitivity in 04 section 19 (audit #3): interval robust.
 \subsection{Confounder Selection with DAGs}
 \subsection{Modified Poisson Regression on Pattern Counts}
 \subsection{Pooling over Cohorts and Absolute Effects}
