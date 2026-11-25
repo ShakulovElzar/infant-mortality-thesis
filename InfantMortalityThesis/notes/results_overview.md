@@ -25,7 +25,7 @@
 | Same, without the 3 items that leak pregnancy length (strict) | **0.030** | 0.72 |
 
 - **In plain terms:** the 10% of births the model ranks highest contain 37.5% of all infant deaths. In the top 1%, about 1 baby in 16 dies, against 1 in 180 overall.
-- The probabilities are reliable (calibration slope 0.94; 3% more deaths observed than predicted).
+- The probabilities are close overall but not exact (calibration slope 0.94; 3% more deaths observed than predicted). By risk decile, deciles 1–9 are under-predicted by 1–13% and the top decile is over-predicted by 5%.
 - **What drives the prediction:** twins, the mother's earlier births (an earlier child who died, birth intervals), and the start of prenatal care. Pre-pregnancy hypertension and diabetes matter little for *ranking all births*, because they are rare.
 - **Early vs late deaths:** deaths in the first 4 weeks are predicted much better (PR-AUC 0.043, 12 × guessing) than deaths from 1 to 12 months (0.0067, 3.4 ×). Late deaths depend more on social and demographic items.
 - **Fairness:** the model under-predicts risk for American Indian/Alaska Native births by 15%.
@@ -52,7 +52,7 @@ Adjusted for confounders chosen from a DAG, singleton births, pooled over 8 coho
 - **Real-life value:** the strongest, cleanest signals (diabetes, hypertension, severe obesity) are conditions that exist **before** pregnancy and can be treated. This supports **preconception care**: control blood sugar and blood pressure and support weight management *before* conception, not only during pregnancy. Diabetes, hypertension and BMI ≥ 35 together account for roughly 1,300 excess infant deaths a year among U.S. singletons if the associations are causal (an upper figure: some mothers have more than one factor, so the sum counts them twice). The excess deaths per year are a rough figure: RD × exposed births ÷ 8 years, and they assume causality.
 
 ### 5. How trustworthy is all this? (`05_checks`)
-19 checks fixed before the results: 9 PASS, 1 FAIL (CDC's 2016–2017 tables), 3 WEAKENED (negative control: smoking, short interval, BMI 30–34.9), 2 APPLIED (random effects, imputation), 4 INFO. Every deviation from the plan is dated in the change log.
+20 rows (18 checks fixed before the results, 2 post-hoc): 8 PASS, 2 FAIL (a birth-count typo in the 2020 guide; CDC's 2016–2017 Table 2), 3 WEAKENED (negative control: smoking, short interval, BMI 30–34.9), 2 APPLIED (random effects, imputation), 5 INFO. Every deviation from the plan is dated in the change log.
 
 ---
 

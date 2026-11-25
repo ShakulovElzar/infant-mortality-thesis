@@ -1,5 +1,5 @@
 part,check,rule,result,status,note
-Step 1,Record counts vs user guides,"births and deaths equal the guide, every cohort","births 7/8, deaths 8/8",PASS,"2020 guide prints 3,549,826 births: a typo; the file and NCHS agree on 3,619,826"
+Step 1,Record counts vs user guides,"births and deaths equal the guide, every cohort","births 7/8, deaths 8/8",FAIL,"Failure comes from the 2020 guide, not our data: it prints 3,549,826 births (a typo); the file and NCHS agree on 3,619,826"
 Step 1,CDC Documentation Table 2 reproduced,"every rate within 0.01 per 1,000","exact in 6 cohorts (2018-2023); off in [2016, 2017]",FAIL,"Failures come from CDC's tables, not our data: the 2016 file was re-released with birth weight for 2,493 births the guide lists as not stated; the 2017 guide copies all-races deaths into the NH White rows."
 Part 1,1. Best model beats age + race model,"PR-AUC difference > 0, 95% CI excludes 0",0.0293 (0.0277 to 0.0308),PASS,""
 Part 1,2. Calibration slope,0.9 <= slope <= 1.1,0.942 (0.933 to 0.950); O/E 1.03,PASS,CI excludes 1: predictions slightly too spread out
