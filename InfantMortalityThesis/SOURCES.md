@@ -36,4 +36,13 @@ Public CDC individual records have no county identifiers; county sources can be 
 ## Future references (planned, not used yet)
 
 - **CDC WONDER Linked Birth / Infant Death Records, 2017–2023 Expanded:** https://wonder.cdc.gov/lbd.html (help: https://wonder.cdc.gov/wonder/help/lbd-expanded.html). Online aggregate queries, free after accepting the data-use terms. Planned uses: (1) check our cohort counts and rates by year, maternal risk factor, birth weight and gestation against official tables; (2) a separate state- or large-county-level analysis. WONDER output is aggregate and suppresses small cells, so it cannot add columns to individual CDC records. Note that WONDER rates are period-based by default; compare like with like.
-- **NCHS fetal-death files:** https://www.cdc.gov/nchs/data_access/VitalStatsOnline.htm (guide: https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Dataset_Documentation/DVS/fetaldeath/2023fetaluserguide.pdf). Possible perinatal sensitivity check for live-birth selection.
+- **NCHS fetal-death files:** used since 25 Nov 2026 (`06_extra_research` section 6); see the section below.
+
+## Used in the extra research (25 Nov 2026, `06_extra_research`)
+
+- **NCHS fetal-death public files 2016–2023** (`Fetal<year>US_COD.zip`), https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/fetaldeathus/ ; user guides in `docs/fetal_guides/`. Stillbirth composite (section 6).
+- **Ely DM, Gregory ECW, Drake P.** Infant mortality by maternal prepregnancy body mass index: United States, 2017–2018. *National Vital Statistics Reports* 69(9), 2020. Table 2 used as an external check (section 3). PDF in `docs/external/`.
+- **Martin JA, Wilson EC, Osterman MJK, Saadi EW, Sutton SR, Hamilton BE.** Assessing the quality of medical and health data from the 2003 birth certificate revision: results from two states. *National Vital Statistics Reports* 62(2), 2013. Table 4: pre-pregnancy hypertension sensitivity 13/33 (state A). Bias analysis (section 5).
+- **Howland RE, Mulready-Ward C, Madsen AM, et al.** Reliability of reported maternal smoking: comparing the birth certificate to maternal worksheets and prenatal and hospital medical records, New York City and Vermont, 2009. *Matern Child Health J* 19(9):1916–1924, 2015. Table 2 counts (smoking before pregnancy). Bias analysis (section 5).
+- **Dietz P, Bombard J, Mulready-Ward C, et al.** Validation of selected items on the 2003 U.S. Standard Certificate of Live Birth: New York City and Vermont. *Public Health Reports* 130(1):60–70, 2015. Read only in its text: pre-pregnancy diabetes and hypertension could not be evaluated (small numbers). No value used.
+- **Methods (not read in this session; standard references):** Lash TL, Fox MP, Fink AK, *Applying Quantitative Bias Analysis to Epidemiologic Data* (Springer); Vickers AJ, Elkin EB, Decision curve analysis, *Med Decis Making* 26:565–574, 2006.

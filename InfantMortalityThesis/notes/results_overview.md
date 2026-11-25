@@ -56,7 +56,22 @@ Adjusted for confounders chosen from a DAG, singleton births, pooled over 8 coho
 
 ---
 
-## Part II — Audit: mistakes, weak points and improvements
+## Part II — Extra research (25 Nov 2026, `06_extra_research`)
+
+All post-hoc; every rule was written in the plan before its run.
+
+| Question | Result | Real-life meaning |
+|---|---|---|
+| Do our BMI data agree with NCHS? | Births per BMI class identical to NVSR 69(9); rates within 1.1% | An outside check of the data, not only of our own code |
+| Does each factor act through the cause its biology predicts? | Diabetes → birth defects (RR 2.59 vs 1.64 for other causes); smoking → SUID (2.51 vs 1.40); hypertension → P07 code: no | Specific links support a real effect; poverty alone would raise all causes evenly |
+| Can check-box errors explain the RRs? | No. Usual errors make the RRs too low (hypertension 1.50 → 1.75, smoking 1.68 → 2.18) | The Part 2 numbers are probably conservative |
+| Do live births hide part of the harm? | Diabetes 1.84 → 2.48 and hypertension 1.50 → 1.74 with stillbirths | Preconception control of diabetes prevents stillbirths too, not only infant deaths |
+| How much runs through earlier delivery? | Hypertension all of it (1.03); diabetes two thirds; BMI ≥ 40 half; smoking one third | For hypertension, preventing early delivery is the lever; for smoking, safe-sleep advice matters too (SUID) |
+| Is the Part 1 model useful for a program? | Net benefit over "contact all / none" at every threshold 0.25–5% | Example: at a 1% threshold the model flags 10.4% of births with a net gain of 10.8 per 10,000 births |
+
+---
+
+## Part III — Audit: mistakes, weak points and improvements
 
 ### A. Mistakes found and already fixed during the work
 1. The 2017 join failed (number padding) → compared as integers.
@@ -75,8 +90,8 @@ None of these changed a published number after it was reported, except item 9 (t
 ### B. Weak points that remain (say them in the limitations)
 1. **Timing leakage in Part 1.** Three inputs carry a little information about pregnancy length. The pre-registered numbers (0.038) are optimistic; the strict model (0.030) is the honest headline. *Action:* lead with the strict numbers in the text.
 2. **Residual social confounding in Part 2.** The negative control flags smoking, short intervals and BMI 30–34.9. Extra social markers explain part of it for smoking (RR 1.68 → 1.58), none of it for short intervals. Read these RRs as upper bounds.
-3. **Exposure recording.** Hypertension, diabetes and smoking come from birth-certificate check boxes and self-report, which miss some cases. The direction of the resulting bias is not certain.
-4. **Live births only.** These factors also cause stillbirths. Babies who survive to be born may be selected, which can bias the RRs (usually toward 1).
+3. **Exposure recording.** Hypertension, diabetes and smoking come from birth-certificate check boxes and self-report, which miss some cases. *Addressed 25 Nov 2026* (`06_extra_research` section 5): with published sensitivities the RRs stay above 1; the usual (non-differential) errors make them too low. The diabetes priors are assumptions (no validation value found).
+4. **Live births only.** These factors also cause stillbirths. *Tested 25 Nov 2026* (`06_extra_research` section 6): with fetal deaths the diabetes RR rises from 1.84 to 2.48 (BIASED by the 20% rule) and hypertension from 1.50 to 1.74. The live-birth RRs under-state the harm. The interval could not be tested (not on the fetal file).
 5. **No geography, no income.** The public files have no state or county since 2005, and no income.
 6. **Interval measurement.** It is computed as months to birth minus gestational age, so it can be off by about one month near class borders.
 7. **Bootstrap scope.** The Part 1 CIs cover test-set sampling only, not the variation from retraining the models.
@@ -87,9 +102,9 @@ None of these changed a published number after it was reported, except item 9 (t
 ### C. Possible improvements, ranked by value for the thesis
 1. **DONE 24 Nov 2026: test of the social-confounding explanation** (`04_association` section 18). Adding marital status, WIC and father's information lowers the smoking RR from 1.68 to **1.58** and its accident RR from 1.81 to 1.66; the short-interval RRs do not change; hypertension, diabetes and BMI are unchanged or slightly higher. So social confounding explains part of the smoking signal, not the interval signal; both stay upper bounds.
 2. **Lead with strict Part 1 results** in the text (no code).
-3. **Quantitative bias analysis for exposure misclassification (about 2 hours plus reading).** Use published sensitivity values of birth-certificate items to show how much the RRs could change.
-4. **Stillbirth sensitivity (larger).** Add the CDC fetal-death files (listed in `SOURCES.md`) and repeat Part 2 for fetal + infant death.
+3. **DONE 25 Nov 2026: quantitative bias analysis** (`06_extra_research` section 5). All RRs robust.
+4. **DONE 25 Nov 2026: stillbirth composite** (`06_extra_research` section 6). Diabetes biased by live-birth selection.
 5. **Small code hygiene (about 5 minutes).** Make the calibration solver `_logit_newton` stop with an error if it does not converge, as the Part 2 fitter already does.
 
 ### D. Is the code finished?
-Yes, for the planned analysis: data build, benchmark, Table 1, Part 1 (with strict and age-split analyses), Part 2 (with imputation and all checks), and the checks table. Items C1, C3 and C4 would be optional additions; C5 is a 5-minute fix.
+Yes, for the planned analysis: data build, benchmark, Table 1, Part 1 (with strict and age-split analyses), Part 2 (with imputation and all checks), and the checks table. Items C1, C3 and C4 are done (C3 and C4 in `06_extra_research`); C2 is a writing task; C5 is a 5-minute fix.

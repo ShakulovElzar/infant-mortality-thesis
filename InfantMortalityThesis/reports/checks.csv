@@ -19,3 +19,28 @@ Part 2,4. Collider demonstration (adjust for gestational age),report and explain
 Part 2,5. Missing data -> multiple imputation,relative death-rate difference > 20% triggers imputation,"triggered for 13/13 items; after imputing BMI, education, interval the largest RR change is 1.2%",APPLIED,The plan sets no pass/fail rule for the size of the change; no conclusion changes (assumes missing at random given the model items).
 Part 2,"Multiple testing (Holm, 15 tests)",sensitivity: Holm-adjusted p-values,all 15 significant; largest Holm p = 4.2e-38,INFO,""
 Part 2,Post-hoc: extra social markers (sensitivity c),not pre-set; tests the negative-control explanation,smoking 1.68 -> 1.58 (accident 1.81 -> 1.66); interval <6 mo 1.22 -> 1.23,INFO,Supports social confounding for smoking only partly; does not explain the short-interval signal.
+Extra,E6. BMI births and rates vs NVSR 69(9),"births within 0.5%, rates within 5% per BMI class","births max diff 0.00%, rates max diff 1.1%",PASS,""
+Extra,E1. hypertension: RR for preterm / low birth weight > other causes,ratio of RRs > 1 and 95% CI excludes 1,ratio 0.95 (0.88-1.03),FAIL,""
+Extra,E1. diabetes: RR for congenital anomalies > other causes,ratio of RRs > 1 and 95% CI excludes 1,ratio 1.58 (1.45-1.71),PASS,""
+Extra,E1. smoking: RR for SUID > other causes,ratio of RRs > 1 and 95% CI excludes 1,ratio 1.80 (1.73-1.86),PASS,""
+Extra,"E2. Recording bias: hypertension, non-differential",FRAGILE if the 95% simulation interval includes 1,RR 1.50 -> 1.75 (1.59-2.14),PASS,"Se: Martin et al. 2013, NVSR 62(2), Table 4, state A, 13/33; Sp: assumption"
+Extra,"E2. Recording bias: hypertension, differential (Se deaths +0.10)",FRAGILE if the 95% simulation interval includes 1,RR 1.50 -> 1.36 (1.18-1.66),PASS,"Se: Martin et al. 2013, NVSR 62(2), Table 4, state A, 13/33; Sp: assumption"
+Extra,"E2. Recording bias: diabetes, non-differential",FRAGILE if the 95% simulation interval includes 1,RR 1.84 -> 1.95 (1.81-2.26),PASS,Se and Sp: assumptions (no validation value found for pre-pregnancy diabetes)
+Extra,"E2. Recording bias: diabetes, differential (Se deaths +0.10)",FRAGILE if the 95% simulation interval includes 1,RR 1.84 -> 1.70 (1.52-1.99),PASS,Se and Sp: assumptions (no validation value found for pre-pregnancy diabetes)
+Extra,"E2. Recording bias: smoking, non-differential",FRAGILE if the 95% simulation interval includes 1,RR 1.68 -> 2.18 (1.97-2.57),PASS,"Howland et al. 2015, Matern Child Health J 19:1916, Table 2 (123/188, 830/849)"
+Extra,"E2. Recording bias: smoking, differential (Se deaths +0.10)",FRAGILE if the 95% simulation interval includes 1,RR 1.68 -> 1.82 (1.65-2.15),PASS,"Howland et al. 2015, Matern Child Health J 19:1916, Table 2 (123/188, 830/849)"
+Extra,E3. Stillbirth selection: hypertension yes,composite RR / live-birth RR within 0.80-1.25,"live 1.50, fetal or infant 1.74 (ratio 1.16)",PASS,""
+Extra,E3. Stillbirth selection: diabetes yes,composite RR / live-birth RR within 0.80-1.25,"live 1.84, fetal or infant 2.48 (ratio 1.35)",BIASED,""
+Extra,E3. Stillbirth selection: bmi <18.5,composite RR / live-birth RR within 0.80-1.25,"live 1.14, fetal or infant 1.09 (ratio 0.95)",PASS,""
+Extra,E3. Stillbirth selection: bmi 25-29.9,composite RR / live-birth RR within 0.80-1.25,"live 1.07, fetal or infant 1.11 (ratio 1.03)",PASS,""
+Extra,E3. Stillbirth selection: bmi 30-34.9,composite RR / live-birth RR within 0.80-1.25,"live 1.22, fetal or infant 1.27 (ratio 1.04)",PASS,""
+Extra,E3. Stillbirth selection: bmi 35-39.9,composite RR / live-birth RR within 0.80-1.25,"live 1.35, fetal or infant 1.41 (ratio 1.04)",PASS,""
+Extra,E3. Stillbirth selection: bmi >=40,composite RR / live-birth RR within 0.80-1.25,"live 1.53, fetal or infant 1.59 (ratio 1.04)",PASS,""
+Extra,E3. Stillbirth selection: smoking any,composite RR / live-birth RR within 0.80-1.25,"live 1.72, fetal or infant 1.60 (ratio 0.93)",PASS,""
+Extra,E4. Mediation through gestational age: hypertension,proportion mediated: lower CI limit > 0.5,1.03 (0.97-1.09),PASS,""
+Extra,E4. Mediation through gestational age: smoking,proportion mediated: upper CI limit < 0.5,0.36 (0.34-0.37),PASS,""
+Extra,E5. Decision curve: any death: main Set B,"net benefit - max(treat all, 0): 95% CI above 0",useful at 9 of 9 thresholds (0.25-5%),INFO,""
+Extra,E5. Decision curve: any death: strict Set B,"net benefit - max(treat all, 0): 95% CI above 0",useful at 9 of 9 thresholds (0.25-5%),INFO,""
+Extra,E5. Decision curve: neonatal,"net benefit - max(treat all, 0): 95% CI above 0",useful at 9 of 9 thresholds (0.25-5%),INFO,""
+Extra,E5. Decision curve: postneonatal: original,"net benefit - max(treat all, 0): 95% CI above 0",useful at 5 of 9 thresholds (0.25-1.5%),INFO,""
+Extra,E5. Decision curve: postneonatal: recalibrated,"net benefit - max(treat all, 0): 95% CI above 0",useful at 4 of 9 thresholds (0.25-1%),INFO,""
